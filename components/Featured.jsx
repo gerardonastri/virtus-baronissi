@@ -38,28 +38,28 @@ const Fetatured = () => {
 
         <div className={`${styles.box} ${styles.responsive}`} style={{width: '500px', height: "fit-content"}}>
           <div className={styles.team2}>
-            <img src="/logo.png" alt="" style={{width: '150px', height: '150px'}} />
+            <img src="/logo.png" className={styles.virtusImg} alt="" style={{width: '150px', height: '150px'}} />
             <h2>Virtus Baronissi</h2>
           </div>
           <div className={styles.vs}>
             <h1>VS</h1>
           </div>
           <div className={styles.team2}>
-            <img src="/guest.webp" alt="" style={{width: '150px', height: '150px'}} />
+            <img src="/guest.webp" className={styles.guest} alt="" style={{width: '150px', height: '150px'}} />
             <h2>Guest</h2>
           </div>
         </div>
 
         <div className={`${styles.box} ${styles.responsive}`} style={{width: '450px', height: "fit-content"}}>
           <div className={styles.team2}>
-            <img src="/logo.png" alt="" style={{width: '120px', height: '120px'}} />
+            <img src="/logo.png" alt="" className={styles.virtusImg} style={{width: '120px', height: '120px'}} />
             <h2>Virtus Baronissi</h2>
           </div>
           <div className={styles.vs}>
             <h1>VS</h1>
           </div>
           <div className={styles.team2}>
-            <img src="/guest.webp" alt="" style={{width: '120px', height: '120px'}} />
+            <img src="/guest.webp" alt="" className={styles.guest} style={{width: '120px', height: '120px'}} />
             <h2>Guest</h2>
           </div>
         </div>

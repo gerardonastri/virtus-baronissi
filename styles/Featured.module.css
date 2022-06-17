@@ -110,9 +110,21 @@
     }
     .team2{
         font-size: 14px;
+        text-align: center;
+        max-width: 100%;
     }
-    .vs{
-        font-size: 20px;
-        margin: 0;
+    .guest{
+        width: 150px !important;
+        height: 100px !important;
     }
+    .virtusImg{
+        width: 150px !important;
+        height: 80px !important;
+    }
+    .vs h1{
+        font-size: 28px;
+        margin: 0 !important;
+        margin-bottom: 10px !important;
+    }
+    
 }

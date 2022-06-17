@@ -22,10 +22,10 @@ const Navbar = () => {
                 <span href="" style={{display: 'inline-flex', alignItems: 'center'}}>
                     Giovanili {showDropDown ? <ArrowDropUpIcon onClick={() => setShowDropDown(prev => !prev)} /> : <ArrowDropDownIcon onClick={() => setShowDropDown(prev => !prev)} />}
                     <div className={(showDropDown) ? `${styles.dropdown} ${styles.show}` : styles.dropdown}>
-                        <a href="#!"><SportsBasketballIcon /> Under 19</a>
-                        <a href="#!"><SportsBasketballIcon /> Under 17</a>
-                        <a href="#!"><SportsBasketballIcon /> Under 15</a>
-                        <a href="#!"><SportsBasketballIcon /> Minibasket</a>
+                        <a href="/squadra/under19"><SportsBasketballIcon /> Under 19</a>
+                        <a href="/squadra/under17"><SportsBasketballIcon /> Under 17</a>
+                        <a href="/squadra/under15"><SportsBasketballIcon /> Under 15</a>
+                        <a href="/squadra/minibasket"><SportsBasketballIcon /> Minibasket</a>
                     </div>
                 </span>
             </div>

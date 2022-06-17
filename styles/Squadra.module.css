@@ -1,0 +1,67 @@
+
+
+
+.teamName{
+    margin-top: 100px;
+    text-align: center;
+}
+.wrapper{
+    display: flex;
+}
+.section{
+    flex: 1;
+}
+.section h2{
+    text-align: center;
+    color: #1C2B4B;
+
+}
+.section:nth-child(1),
+.section:nth-child(2){
+    border-right: 1px solid rgb(224, 220, 220);
+}
+.roaster li{
+    /*color: #D12023;*/
+    display: flex;
+    align-items: center;
+    color: rgb(112, 99, 99);
+    font-weight: 500;
+}
+
+.roaster li span{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.roaster li span svg{
+    margin-right: 5px;
+    color: rgb(24, 22, 22) ;
+}
+.classifica{
+    height: 100%;
+    width: 95%;
+    margin: auto;
+}
+.blue{
+    background-color: #1C2B4B !important;
+}
+.red{
+    background-color: #D12023 !important;
+}
+
+@media (min-width: 450px) and (max-width: 700px) {
+    .wrapper{
+        flex-direction: column;
+    }
+}
+@media (max-width: 450px) {
+    .container > h1{
+        margin-top: 120px;
+    }
+    .wrapper{
+        flex-direction: column;
+    }
+    .classifica:nth-child(1) div table tbody tr td{
+        padding: 5px !important;
+    }
+}
