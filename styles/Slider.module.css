@@ -1,0 +1,116 @@
+.container {
+   width: 100%;
+   height: 100%;
+   background-color: #eaeaeb;
+   padding: 20px 0;
+   margin-top: 80px;
+}
+.wrapper{
+    max-width: 1400px;
+    height: 700px;
+    margin: 0 auto 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+  @media screen and (max-width: 700px){
+    .container {
+      margin: 0;
+      padding: 0;
+    }
+    .wrapper{
+        height: 500px;
+        padding-top: 0;
+    }
+    .prev{
+        left: 10px !important;
+
+    }
+    .next{
+        right: 10px !important;
+    }
+    .btnSlide{
+        background-color: #f1f1f1b2 !important;
+        border: none !important;
+    }
+  }
+  .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    opacity: 0;
+    transition: opacity ease-in-out 0.4s;
+    transition: display ease-in-out 0.4s;
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .activeAnim {
+    opacity: 1;
+    display: block;
+  }
+  
+  .btnSlide {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #f1f1f1;
+    border: 1px solid rgba(34, 34, 34, 0.287);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .btnSlide img {
+    width: 25px;
+    height: 25px;
+    pointer-events: none;
+  }
+  .prev {
+    top: 50%;
+    left: 20px;
+    transform: translateY(-60%);
+  }
+  .next {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-60%);
+  }
+  
+  
+  .containerDots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #f1f1f1;
+    margin: 0 5px;
+    background: #f1f1f1;
+  }
+  .dot.active {
+    background: rgb(32, 32, 32);
+  }
+
+.team{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.748);
+    padding: 10px;
+    border-radius: 8px;
+}
