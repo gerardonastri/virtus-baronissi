@@ -31,7 +31,7 @@ const Navbar = () => {
                     </div>
                 </span>
                 <span  style={{display: 'inline-flex', alignItems: 'center'}}>
-                    Corsi {showDropDown2 ? <ArrowDropUpIcon onClick={() => setShowDropDown2(prev => !prev)} /> : <ArrowDropDownIcon onClick={() => setShowDropDown2(prev => !prev)} />}
+                    Corsi {showDropDown2 ? <ArrowDropUpIcon onClick={() => setShowDropDown2(prev => !prev)} /> : <ArrowDropDownIcon onClick={() => {setShowDropDown2(prev => !prev); setShowDropDown2(false)}} />}
                     <div className={(showDropDown2) ? `${styles.dropdown2} ${styles.show}` : styles.dropdown2}>
                         <span ><AccessTimeIcon /> ore 16:00-17:00 Minibasket (2016-2013) - solo lunedi</span>
                         <span ><AccessTimeIcon /> ore 17:00-18:00 Minibasket (2012-2011)</span>
