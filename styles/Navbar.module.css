@@ -33,7 +33,7 @@
     list-style: none;
 }
 
-.dropdown{
+.dropdown, .dropdown2{
     position: absolute;
     top: 50px;
     left: -10px;
@@ -45,15 +45,16 @@
     padding-top: 10px;
     display: none;
     z-index: 999;
+    width: max-content;
 }
-.dropdown a{
+.dropdown a, .dropdown2 span{
     margin-left: 0;
     font-size: 14px;
     margin-bottom: 20px;
     display: inline-flex;
     align-items: center;
 }
-.dropdown a svg{
+.dropdown a svg, .dropdown2 span svg{
     margin-right: 10px;
     color: black;
     font-size: 20px;
@@ -147,10 +148,21 @@
         padding-left: 40px;
         display: none;
     }
+    .dropdown2{
+        top: 23px;
+        left: -20px;
+        padding-top: 5px;
+        display: none;
+    }
     .show{
         width: 120%;
     }
     .dropdown a{
+        margin-left: 0;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .dropdown2 span{
         margin-left: 0;
         font-size: 14px;
         margin-bottom: 10px;

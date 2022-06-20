@@ -4,13 +4,12 @@ import {axiosReq} from '../util/apiCalls'
 import axios from 'axios'
 import { Pagination as Pages } from '@mui/material';
 
-const Pagination = ({squadra}) => {
-    const [images, setImages] = useState([]);
+const Pagination = ({images}) => {
     const [currentPage, setCurrentPage] = useState(1);
-    const [imagesPerPage, setImagesPerPage] = useState(10);
+    const [imagesPerPage, setImagesPerPage] = useState(8);
 
     useEffect(() => {
-        const getImages = async () => {
+        /*const getImages = async () => {
             const res = await axios.get('https://jsonplaceholder.typicode.com/photos', {
                 params: {
                     _limit: 80
@@ -19,12 +18,12 @@ const Pagination = ({squadra}) => {
             setImages(res.data)
         }
 
-        getImages()
-    }, [])
-        
+        getImages()*/
+    }, [])  
+
     const indexOfLastImage = currentPage * imagesPerPage;
     const indexOfFirstimages = indexOfLastImage - imagesPerPage;
-    const currentImages = images.slice(indexOfFirstimages, indexOfLastImage);
+    const currentImages = images?.slice(indexOfFirstimages, indexOfLastImage);
     
     const handleChange = (page) => {
         setCurrentPage(page);
@@ -34,11 +33,11 @@ const Pagination = ({squadra}) => {
   return (
     <div className={styles.container}>
         <div className={styles.wrapper}>
-            {currentImages.map(img => (
-                <img src={img.url} alt="" />
+            {currentImages?.map(img => (
+                <img src={img} alt="" />
             ))}
         </div>
-        <Pages onChange={(e) => handleChange(e.target.textContent)} sx={{display: 'flex', justifyContent: 'flex-end', marginTop: '10px'}} count={Math.ceil(images.length / imagesPerPage)} />
+        <Pages onChange={(e) => handleChange(e.target.textContent)} sx={{display: 'flex', justifyContent: 'flex-end', marginTop: '10px'}} count={Math.ceil(images?.length / imagesPerPage)} />
     </div>
   )
 }

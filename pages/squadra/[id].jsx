@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../../styles/Squadra.module.css'
 import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 import PersonIcon from '@mui/icons-material/Person';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import { styled } from '@mui/material/styles';
@@ -13,6 +14,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { DataGrid } from '@mui/x-data-grid';
 import  Pagination  from  '../../components/Pagination';
+import { axiosReq } from '../../util/apiCalls';
 
 
 
@@ -42,6 +44,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   
 const Squadra = () => {
     const [id, setId] = useState(null);
+    const [data, setData] = useState(null)
 
     const roaster = [
         { nome: 'Apicella Giuseppe', anno: 2022, numero: 3},
@@ -97,47 +100,53 @@ const Squadra = () => {
             }
             setId(id)
         }
+        const getData = async () => {
+            let id = location.pathname.split('/')[2];
+            const res = await axiosReq(`team?id=${id}`)
+            setData(res.data)
+        }
         getTeam()
+        getData()
     }, [])
-
 
   return (
     <div className={styles.container}>
         <Navbar />
         <h1 className={styles.teamName}>{id?.toUpperCase()}</h1>
         <div className={styles.wrapper}>
+
             <div className={styles.section}>
                 <h2 style={styles.sectionTitle}>Roaster</h2>
                 <div className={styles.classifica}>
                      <TableContainer component={Paper} sx={{width: '100%'}}>
-                        <Table sx={{ width: '95%', margin: 'auto' }} aria-label="customized table">
+                        <Table  aria-label="customized table">
                             <TableHead>
                             <TableRow>
-                                <StyledTableCell>Nome</StyledTableCell>
-                                <StyledTableCell align="right" sx={{textAlign: 'center', padding: {xs: '8px'}}}>Anno</StyledTableCell>
-                                <StyledTableCell align="right" sx={{textAlign: 'center', padding: {xs: '8px'}}}>Numero</StyledTableCell>
+                                <StyledTableCell className={styles.gray}>Nome</StyledTableCell>
+                                <StyledTableCell align="right" className={styles.gray} sx={{textAlign: 'center', padding: {xs: '3px 8px'}}}>Anno</StyledTableCell>
+                                <StyledTableCell align="right" className={styles.gray} sx={{textAlign: 'center', padding: {xs: '3px 8px'}}}>Numero</StyledTableCell>
                                 {id == 'under 19' && (
                                     <>
-                                    <StyledTableCell align="right" sx={{textAlign: 'center', padding: {xs: '8px'}}}>Punti</StyledTableCell>
-                                    <StyledTableCell align="right" sx={{textAlign: 'center', padding: {xs: '8px'}}}>Partite</StyledTableCell>
-                                    <StyledTableCell align="right" sx={{textAlign: 'center',  padding: {xs: '8px'}}}>Media</StyledTableCell>
+                                    <StyledTableCell align="right" className={styles.gray} sx={{textAlign: 'center', padding: {xs: '3px 8px'}}}>Punti</StyledTableCell>
+                                    <StyledTableCell align="right" className={styles.gray} sx={{textAlign: 'center', padding: {xs: '3px 8px'}}}>Partite</StyledTableCell>
+                                    <StyledTableCell align="right" className={styles.gray} sx={{textAlign: 'center',  padding: {xs: '3px 8px'}}}>Media</StyledTableCell>
                                     </>
                                 )}
                             </TableRow>
                             </TableHead>
                             <TableBody>
-                            {roaster.map((row) => (
+                            {data?.roaster.map((row) => (
                                 <StyledTableRow key={row.nome}>
-                                <StyledTableCell component="th" scope="row"  sx={{fontWeight: '600', color: "rgb(70 56 56)"}}>
+                                <StyledTableCell component="th" scope="row"  sx={{fontWeight: '600', color: "rgb(70 56 56)", padding: {xs: '8px 10px'} }}>
                                     {row.nome}
                                 </StyledTableCell>
-                                <StyledTableCell align="center" sx={{padding: {xs: '8px'}}} >{row.anno}</StyledTableCell>
-                                <StyledTableCell align="center" sx={{padding: {xs: '8px'}}} >{row.numero}</StyledTableCell>
+                                <StyledTableCell align="center" sx={{padding: {xs: '3px 8px'}}} >{row.anno}</StyledTableCell>
+                                <StyledTableCell align="center" sx={{padding: {xs: '3px 8px'}}} >{row.numero}</StyledTableCell>
                                 {id === 'under 19' && (
                                     <>
-                                        <StyledTableCell align="center" sx={{color: "blue", padding: {xs: '8px'}}} >188</StyledTableCell>
-                                        <StyledTableCell align="center" sx={{color: "red", padding: {xs: '8px'}}} >10</StyledTableCell>
-                                        <StyledTableCell align="center" sx={{color: "green", padding: {xs: '8px'}}} >18</StyledTableCell>
+                                        <StyledTableCell align="center" sx={{color: "blue", padding: {xs: '3px 8px'}}} >188</StyledTableCell>
+                                        <StyledTableCell align="center" sx={{color: "red", padding: {xs: '3px 8px'}}} >10</StyledTableCell>
+                                        <StyledTableCell align="center" sx={{color: "green", padding: {xs: '3px 8px'}}} >18</StyledTableCell>
                                     </>
                                 )}
                                 </StyledTableRow>
@@ -147,6 +156,7 @@ const Squadra = () => {
                     </TableContainer>
                     </div>
             </div>
+
             <div className={styles.section}>
                 <h2 style={styles.sectionTitle}>Classifica</h2>
                 <div className={styles.classifica}>
@@ -162,14 +172,14 @@ const Squadra = () => {
                             </TableRow>
                             </TableHead>
                             <TableBody>
-                            {classifica.map((row) => (
-                                <StyledTableRow key={row.id}>
-                                <StyledTableCell component="th" scope="row" sx={{color: 'blue'}}>
-                                    {row.id}
+                            {data?.classifica.map((row) => (
+                                <StyledTableRow key={row.posizione}>
+                                <StyledTableCell component="th" scope="row" sx={{color: 'blue', padding: {xs: '8px 10px'}}}>
+                                    {row.posizione}
                                 </StyledTableCell>
-                                <StyledTableCell align="center"  sx={{fontWeight: '600', color: "rgb(70 56 56)"}} >{row.nome}</StyledTableCell>
-                                <StyledTableCell align="center" >{row.punti}</StyledTableCell>
-                                    <StyledTableCell align="center" >{row.partite}</StyledTableCell>
+                                <StyledTableCell align="center"  sx={{fontWeight: '600', color: "rgb(70 56 56)", padding: {xs: '8px 10px'}}} >{row.nome}</StyledTableCell>
+                                <StyledTableCell align="center"  sx={{padding: {xs: '8px 10px'}}}>{row.punti}</StyledTableCell>
+                                    <StyledTableCell align="center" sx={{padding: {xs: '8px 10px'}}} >{row.partite}</StyledTableCell>
                                 </StyledTableRow>
                             ))}
                             </TableBody>
@@ -177,6 +187,7 @@ const Squadra = () => {
                     </TableContainer>
                 </div>
             </div>
+
             <div className={styles.section}>
                 <h2 style={styles.sectionTitle}>Calendario</h2>
                 <div className={styles.calendario}>
@@ -186,19 +197,19 @@ const Squadra = () => {
                             <Table aria-label="customized table">
                                 <TableHead>
                                     <TableRow>
-                                        <StyledTableCell className={styles.red}>Partita</StyledTableCell>
+                                        <StyledTableCell className={styles.red} >Partita</StyledTableCell>
                                         <StyledTableCell className={styles.red} align="center">Data</StyledTableCell>
                                         <StyledTableCell className={styles.red} align="center">Risultato</StyledTableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
-                                {calendario.map((row) => (
+                                {data?.calendario.map((row) => (
                                     <StyledTableRow key={row.casa}>
-                                    <StyledTableCell component="th" scope="row" sx={{fontWeight: '600', color: "rgb(70 56 56)"}}>
-                                        {row.casa} - {row.fuori}
+                                    <StyledTableCell component="th" scope="row" sx={{fontWeight: '600', color: "rgb(70 56 56)", padding: {xs: '10px'}}}>
+                                        {row.partita}
                                     </StyledTableCell>
-                                    <StyledTableCell align="center" sx={{color: 'gray', fontWeight: '100'}} >{row.data}</StyledTableCell>
-                                    <StyledTableCell align="center" sx={{color: 'gray'}} >{row.risultato}</StyledTableCell>
+                                    <StyledTableCell align="center" sx={{color: 'gray', fontWeight: '100', padding: {xs: '8px 10px'}}} >{row.data}</StyledTableCell>
+                                    <StyledTableCell align="center" sx={{color: 'gray', padding: {xs: '8px 10px'}}} >{row.risultato}</StyledTableCell>
                                     </StyledTableRow>
                                 ))}
                                 </TableBody>
@@ -207,8 +218,10 @@ const Squadra = () => {
                     </div>
                 </div>
             </div>
+
         </div>
-        <Pagination squadra={id && id} />
+        <Pagination squadra={id && id} images={data && data.images} />
+        <Footer />
     </div>
   )
 }
