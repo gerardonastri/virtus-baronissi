@@ -22,7 +22,7 @@ const Navbar = () => {
                 <a href="/contatti">Contatti</a>
                 <a href="/news">News</a>
                 <span style={{display: 'inline-flex', alignItems: 'center'}}>
-                    Giovanili {showDropDown ? <ArrowDropUpIcon onClick={() => setShowDropDown(prev => !prev)} /> : <ArrowDropDownIcon onClick={() => setShowDropDown(prev => !prev)} />}
+                    Giovanili {showDropDown ? <ArrowDropUpIcon onClick={() => setShowDropDown(prev => !prev)} /> : <ArrowDropDownIcon onClick={() => {setShowDropDown(prev => !prev); setShowDropDown2(false)}} />}
                     <div className={(showDropDown) ? `${styles.dropdown} ${styles.show}` : styles.dropdown}>
                         <a href="/squadra/under19"><SportsBasketballIcon /> Under 19</a>
                         <a href="/squadra/under17"><SportsBasketballIcon /> Under 17</a>
@@ -31,7 +31,7 @@ const Navbar = () => {
                     </div>
                 </span>
                 <span  style={{display: 'inline-flex', alignItems: 'center'}}>
-                    Corsi {showDropDown2 ? <ArrowDropUpIcon onClick={() => setShowDropDown2(prev => !prev)} /> : <ArrowDropDownIcon onClick={() => {setShowDropDown2(prev => !prev); setShowDropDown2(false)}} />}
+                    Corsi {showDropDown2 ? <ArrowDropUpIcon onClick={() => setShowDropDown2(prev => !prev)} /> : <ArrowDropDownIcon onClick={() => setShowDropDown2(prev => !prev)} />}
                     <div className={(showDropDown2) ? `${styles.dropdown2} ${styles.show}` : styles.dropdown2}>
                         <span ><AccessTimeIcon /> ore 16:00-17:00 Minibasket (2016-2013) - solo lunedi</span>
                         <span ><AccessTimeIcon /> ore 17:00-18:00 Minibasket (2012-2011)</span>
