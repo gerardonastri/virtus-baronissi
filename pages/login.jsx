@@ -13,7 +13,7 @@ export default function Login() {
 
   const handleLogin =  async () => {
     login({email, password}, dispatch)
-    await new Promise(done => setTimeout(() => done(), 1000));  
+    await new Promise(done => setTimeout(() => done(), 3000));  
     router.push('/admin')
     
 }

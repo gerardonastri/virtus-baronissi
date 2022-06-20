@@ -23,7 +23,7 @@ const admin = () => {
     useEffect(() => {
         const pushUser = async () =>  {
             if(!user){
-                router.push('/login')
+              router.push('/login')
             }
         }
         const getData = async () => {
