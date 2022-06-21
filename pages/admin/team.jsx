@@ -38,10 +38,13 @@ const team = () => {
         getData()
     }, [])
 
-    const handleDelete = async () => {
-        data[0].images.map(img => {
-            console.log(img);
-        })
+    const handleDelete = async (teamId) => {
+        try {
+            const res = await axiosReq.delete(`${id}?id=${teamId}`)
+            router.reload()
+        } catch (error) {
+            console.log(error);
+        }
     }
 
   return (
@@ -100,7 +103,7 @@ const team = () => {
                                         </a>
         
                                                     
-                                        <button className={styles.btn} onClick={handleDelete}><ClearOutlinedIcon /></button>
+                                        <button className={styles.btn} onClick={() => handleDelete(team._id)}><ClearOutlinedIcon /></button>
                                     </td>
                                 </tr>   
                             ))}

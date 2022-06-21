@@ -364,3 +364,21 @@
     margin-bottom: 20px;
   }
 }
+@media screen and (max-width: 550px) {
+  .widgetSm {
+    width: fit-content;
+
+  }
+  .widgetSmListItem{
+    justify-content: unset;
+  }
+  .widgetSmListItem img{
+    margin-right: 20px;
+  }
+  .widgetSmListItem button{
+    margin-left: 20px;
+  }
+  .widgetLg{
+    display: none;
+  }
+}

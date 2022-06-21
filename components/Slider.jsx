@@ -18,6 +18,12 @@ const Slider = () => {
         'Aquilotti',
         'Pulcini'
     ]
+    const links = [
+        "under19",
+        "under17",
+        "under15",
+        "minibasket"
+    ]
     const handleArrow = (direction) =>{
         if(direction==="l"){
             setIndex(slideIndex !== 0 ? slideIndex-1 : 4)
@@ -38,7 +44,7 @@ const Slider = () => {
             <div className={styles.wrapper}>
             {images.map((img, i) => (
                 <div className={slideIndex === i ? `${styles.slide} ${styles.activeAnim}`: styles.slide}  key={i}>
-                    <a href={`/${teams[i]}`} className={styles.team}>{teams[i]}</a>
+                    <a href={`/squadra/${links[i]}`} className={styles.team}>{teams[i]}</a>
                     <img src={img} alt="" />
                 </div>
             ))}

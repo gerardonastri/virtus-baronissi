@@ -68,6 +68,7 @@
 .formFlex{
     display: flex;
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 .formFlex input:first-child{
     margin-right: 20px;
@@ -83,6 +84,10 @@
     border: none;
     margin-top: 20px;
     font-weight: 600;
+}
+.error{
+    color: red;
+    font-size: 14px;
 }
 
 @media (min-width: 700px) and (max-width: 1300px){

@@ -13,7 +13,7 @@ import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
 
 
-const news = () => {
+const message = () => {
     const [id, setId] = useState(null);
     const [data, setData] = useState(null)
 
@@ -26,7 +26,6 @@ const news = () => {
                 router.push('/login')
             }
         }
-        
         const getData = async () => {
             let id = location.pathname.split('/')[2]
             setId(id)
@@ -38,12 +37,12 @@ const news = () => {
         getData()
     }, [])
 
-    const handleDelete = async (newsId) => {
+    const handleDelete = async (messageId) => {
         try {
-            const res = await axiosReq.delete(`${id}?id=${newsId}`)
+            const res = await axiosReq.delete(`${id}?id=${messageId}`)
             router.reload()
         } catch (error) {
-            console.log(error);
+            
         }
     }
 
@@ -61,36 +60,34 @@ const news = () => {
             <Sidebar />
             <div className={styles.dataContainer}>
                 <div className={styles.adminhome}>
-                    <a href="/create/news" className={`${styles.link} ${styles.create}`}>Create</a>
+                    <a href="/create/match" className={`${styles.link} ${styles.create}`}>Create</a>
                     <table className={styles.table}>
                         <thead className={styles.theaddark}>
                             <tr>
-                                <th>title</th>
-                                <th>desc</th>
-                                <th>coverImg</th>
-                                <th>images</th>
-                                <th>body</th>
+                                <th>nome</th>
+                                <th>telefono</th>
+                                <th>email</th>
+                                <th>messaggio</th>
                                 <th>action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {data?.map(news => (
-                                    <tr>
-                                        <td>{news.title}</td>
-                                        <td>{news.desc}</td>
-                                        <td>{news.coverImg}</td>
-                                        <td className={styles.password}></td>
-                                        <td>{news.body.slice(0,50)}</td>
-                                        <td>
-                                            <a href={`/edit/news/${news._id}`} className={`${styles.btn } ${styles.bordershadow} ${styles.update}`}>
-                                                <span className={styles.textgradient} style={{color: 'white'}}><EditOutlinedIcon /></span>
-                                            </a>
-
-                                            
-                                            <button className={styles.btn} onClick={() => handleDelete(news._id)}><ClearOutlinedIcon /></button>
-                                        </td>
-                                    </tr>   
-                                ))}
+                            {data?.map(message => (
+                                <tr>
+                                    <td>{message.nome}</td>
+                                    <td>{message.telefono}</td>
+                                    <td>{message.email}</td>
+                                    <td>{message.messaggio}</td>
+                                    <td>{message.action}</td>
+                                    <td>
+                                    <a href="#" className={`${styles.btn } ${styles.bordershadow} ${styles.update}`}>
+                                            <span className={styles.textgradient} style={{color: 'white'}}><EditOutlinedIcon /></span>
+                                        </a>
+        
+                                        <button className={styles.btn} onClick={() => handleDelete(message._id)}><ClearOutlinedIcon /></button>
+                                    </td>
+                                </tr>   
+                            ))}
                         </tbody>
                     </table>
                 </div>
@@ -101,4 +98,4 @@ const news = () => {
   )
 }
 
-export default news
+export default message

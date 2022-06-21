@@ -37,8 +37,13 @@ const user = () => {
         getData()
     }, [])
 
-    const handleDelete = async () => { 
-
+    const handleDelete = async (userId) => {
+        try {
+            const res = await axiosReq.delete(`${id}?id=${userId}`)
+            router.reload()
+        } catch (error) {
+            console.log(error);
+        }
     }
 
   return (
@@ -79,7 +84,7 @@ const user = () => {
                                         </a>
 
                                         
-                                        <button className={styles.btn} onClick={handleDelete}><ClearOutlinedIcon /></button>
+                                        <button className={styles.btn} onClick={() => handleDelete(data._id)}><ClearOutlinedIcon /></button>
                                     </td>
                                 </tr>   
                             ))}

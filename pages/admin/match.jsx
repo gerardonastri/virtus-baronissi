@@ -37,8 +37,13 @@ const match = () => {
         getData()
     }, [])
 
-    const handleDelete = async () => {
-
+    const handleDelete = async (matchId) => {
+        try {
+            const res = await axiosReq.delete(`${id}?id=${matchId}`)
+            router.reload()
+        } catch (error) {
+            console.log(error);
+        }
     }
 
   return (
@@ -80,7 +85,7 @@ const match = () => {
                                             <span className={styles.textgradient} style={{color: 'white'}}><EditOutlinedIcon /></span>
                                         </a>
         
-                                        <button className={styles.btn} onClick={handleDelete}><ClearOutlinedIcon /></button>
+                                        <button className={styles.btn} onClick={() => handleDelete(match._id)}><ClearOutlinedIcon /></button>
                                     </td>
                                 </tr>   
                             ))}
