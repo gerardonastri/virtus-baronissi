@@ -24,6 +24,7 @@ const Societa = () => {
             <p>Palestra Palairno Nando Nobile</p>
             <p>Via G. Fortunato 22</p>
             <p>TEL. 3921392228</p>
+            <p>CF: 95089310650  Dona il tuo 5x1000 </p>
 
             <h3 style={{marginBottom: '10px'}}>Corsi</h3>
             <p>Lunedi - Mercoledi - Venerdi</p>

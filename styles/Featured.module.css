@@ -43,8 +43,7 @@
     width: 100%;
 }
 .matchContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
     gap: 40px;
 }
 .matchContainer .box{
@@ -92,6 +91,7 @@
 }
 .nextMinibasket .box{
     padding: 20px 30px;
+    margin-left: 50px;
 }
 .nextMinibasket .matchContainer{
     display: unset;
@@ -101,7 +101,7 @@
 }
 
 
-@media (min-width: 700px) and (max-width: 1300px) {
+@media (min-width: 700px) and (max-width: 1550px) {
     .box{
         width: 95%;
     }
@@ -109,7 +109,11 @@
         flex-direction: column;
     }
     .matchContainer{
-        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
+    }
+    .matchContainer .box{
+        flex: 1;
+        max-width: 700px;
     }
     .matchContainer .box img{
         width: 150px;
@@ -127,6 +131,13 @@
     }
 }
 
+@media (min-width: 700px) and (max-width: 1100px) {
+    .nextMinibasket{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
 
 
 @media (max-width: 700px){
@@ -148,7 +159,7 @@
         align-items: unset;
     }
     .matchContainer{
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
     .next{
         text-align: center;
@@ -175,6 +186,9 @@
     }
     .nextMinibasket{
         flex-direction: column;
+    }
+    .nextMinibasket .box{
+        margin-left: 0;
     }
     
 }
