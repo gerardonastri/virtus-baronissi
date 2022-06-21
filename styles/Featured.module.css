@@ -83,6 +83,22 @@
 .team2 h2{
     margin-bottom: 0;
 }
+.nextMinibasket{
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px 50px;
+    background-color: #1C2B4B;
+}
+.nextMinibasket .box{
+    padding: 20px 30px;
+}
+.nextMinibasket .matchContainer{
+    display: unset;
+}
+.nextMinibasket .next h1,.nextMinibasket .next span{
+    color: white;
+}
 
 
 @media (min-width: 700px) and (max-width: 1300px) {
@@ -156,6 +172,9 @@
         font-size: 28px;
         margin: 0 !important;
         margin-bottom: 10px !important;
+    }
+    .nextMinibasket{
+        flex-direction: column;
     }
     
 }

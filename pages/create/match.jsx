@@ -11,22 +11,26 @@ import Sidebar from '../../components/Sidebar';
 
 const createMatch = () => {
     const [opposingTeam, setOpposingTeam] = useState(null);
-    const [opposingTeamImg, setOpposingTeamImg] = useState("");
+    const [opposingTeamImg, setOpposingTeamImg] = useState(null);
     const [virtusScore, setVirtusScore] = useState(0);
     const [opposingTeamScore, setOpposingTeamScore] = useState(0);
     const [category, setCategory] = useState("");
+    const [type, setType] = useState("");
+    
+    const router = useRouter()
 
 
     const createMatches = async () => {
             try {
               const res = await axiosReq.post('match', {
-                title,
-                desc,
-                coverImg,
-                body,
-                images
+                opposingTeam,
+                opposingTeamImg,
+                virtusScore,
+                opposingTeamScore,
+                category,
+                type
               })
-              router.push('/admin/matches')
+              router.push('/admin/match')
             } catch (error) {
               console.log(error);
             }
@@ -67,6 +71,10 @@ const createMatch = () => {
             <div className={styles.formGroup}>
               <label htmlFor="categoria">Categoria</label>
               <input name="categoria" id="categoria" type="text" value={category} onChange={(e) => setCategory(e.target.value)} />
+            </div>
+            <div className={styles.formGroup}>
+              <label htmlFor="type">Tipo(prossimo o ultimo)</label>
+              <input name="type" id="type" type="text" value={type} onChange={(e) => setType(e.target.value)} />
             </div>
             <button onClick={createMatches}>Submit</button>
 

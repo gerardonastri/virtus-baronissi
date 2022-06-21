@@ -5,9 +5,18 @@ import Match from '../../models/Match'
 const handler = async (req,res) => {
   await dbConnect()
     if(req.method === "GET"){
+      const {sort} = req.query
     try {
-        const matches = await Match.find()
-        res.status(200).json(matches)
+        if(sort){
+          const lastMatch = await Match.findOne({"category": {"$ne": 'minibasket'}, type: 'ultimo'})
+          const nextMatches = await Match.find({"category": {"$ne": 'minibasket'}, type: 'prossimo'})
+          const lastMatchMinibasket = await Match.findOne({"category": 'minibasket', type: 'prossimo'})
+          
+          res.status(200).json({lastMatch, nextMatches, lastMatchMinibasket})
+        } else {
+          const matches = await Match.find()
+          res.status(200).json(matches)
+        }
     } catch (error) {
         console.log(error);
         res.status(500).json(error.message)

@@ -16,6 +16,9 @@ const MatchSchema = new mongoose.Schema({
     },
     category:{
         type: String
+    },
+    type: {
+        type: String
     }
 
 }, {timestamps: true})
