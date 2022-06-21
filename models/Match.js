@@ -13,6 +13,9 @@ const MatchSchema = new mongoose.Schema({
     },
     opposingTeamScore: {
         type: Number
+    },
+    category:{
+        type: String
     }
 
 }, {timestamps: true})

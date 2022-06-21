@@ -14,6 +14,7 @@ const createMatch = () => {
     const [opposingTeamImg, setOpposingTeamImg] = useState("");
     const [virtusScore, setVirtusScore] = useState(0);
     const [opposingTeamScore, setOpposingTeamScore] = useState(0);
+    const [category, setCategory] = useState("");
 
 
     const createMatches = async () => {
@@ -61,7 +62,11 @@ const createMatch = () => {
             </div>
             <div className={styles.formGroup}>
               <label htmlFor="opposingTeamScore">Punteggio squadra avversaria</label>
-              <textarea name="opposingTeamScore" id="opposingTeamScore" cols="30" rows="10" value={opposingTeamScore} onChange={(e) => setOpposingTeamScore(e.target.value)}></textarea>
+              <input name="opposingTeamScore" id="opposingTeamScore" value={opposingTeamScore} onChange={(e) => setOpposingTeamScore(e.target.value)} />
+            </div>
+            <div className={styles.formGroup}>
+              <label htmlFor="categoria">Categoria</label>
+              <input name="categoria" id="categoria" type="text" value={category} onChange={(e) => setCategory(e.target.value)} />
             </div>
             <button onClick={createMatches}>Submit</button>
 

@@ -14,13 +14,14 @@ const handler = async (req,res) => {
     }
     }
     if(req.method === "POST"){
-        const {opposingTeam, opposingTeamImg, virtusScore, opposingTeamScore} = req.body;
+        const {opposingTeam, opposingTeamImg, virtusScore, opposingTeamScore, category} = req.body;
       try {
           const match = await Match.create({
             opposingTeam: opposingTeam,
             opposingTeamImg: opposingTeamImg,
             virtusScore: virtusScore,
-            opposingTeamScore: opposingTeamScore
+            opposingTeamScore: opposingTeamScore,
+            category: category
 
           })
           res.status(200).json(match)

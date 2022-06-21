@@ -113,6 +113,7 @@
     background-color: rgba(0, 0, 0, 0.748);
     padding: 10px;
     border-radius: 8px;
+    font-family: "Poppins", "Roboto";
 }
 
 @media screen and (max-width: 700px) {

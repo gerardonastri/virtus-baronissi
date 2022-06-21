@@ -63,6 +63,8 @@ const match = () => {
                                 <th>opposingTeamImg</th>
                                 <th>virtusScore</th>
                                 <th>opposingTeamScore</th>
+                                <th>category</th>
+                                <th>action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -72,6 +74,7 @@ const match = () => {
                                     <td>{match.opposingTeamImg}</td>
                                     <td>{match.virtusScore}</td>
                                     <td>{match.opposingTeamScore}</td>
+                                    <td>{match.category}</td>
                                     <td>
                                     <a href={`/edit/news/${match._id}`} className={`${styles.btn } ${styles.bordershadow} ${styles.update}`}>
                                             <span className={styles.textgradient} style={{color: 'white'}}><EditOutlinedIcon /></span>

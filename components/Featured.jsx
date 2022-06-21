@@ -36,31 +36,46 @@ const Fetatured = () => {
           <h1>PROSSIMI INCONTRI</h1>
         </div>
 
-        <div className={`${styles.box} ${styles.responsive}`} style={{width: '500px', height: "fit-content"}}>
-          <div className={styles.team2}>
-            <img src="/logo.png" className={styles.virtusImg} alt="" style={{width: '150px', height: '150px'}} />
-            <h2>Virtus Baronissi</h2>
+        <div className={styles.matchContainer}>
+          <div className={`${styles.box} ${styles.responsive}`} style={{height: "fit-content"}}>
+            <div className={styles.team2}>
+              <img src="/logo.png" className={styles.virtusImg} alt="" style={{ height: '120px'}} />
+              <h2>Virtus Baronissi</h2>
+            </div>
+            <div className={styles.vs} >
+              <h1>VS</h1>
+            </div>
+            <div className={styles.team2}>
+              <img src="/guest.webp" className={styles.guest} alt="" style={{ height: '120px'}} />
+              <h2>Guest</h2>
+            </div>
           </div>
-          <div className={styles.vs}>
-            <h1>VS</h1>
-          </div>
-          <div className={styles.team2}>
-            <img src="/guest.webp" className={styles.guest} alt="" style={{width: '150px', height: '150px'}} />
-            <h2>Guest</h2>
-          </div>
-        </div>
 
-        <div className={`${styles.box} ${styles.responsive}`} style={{width: '450px', height: "fit-content"}}>
-          <div className={styles.team2}>
-            <img src="/logo.png" alt="" className={styles.virtusImg} style={{width: '120px', height: '120px'}} />
-            <h2>Virtus Baronissi</h2>
+          <div className={`${styles.box} ${styles.responsive}`} style={{ height: "fit-content"}}>
+            <div className={styles.team2}>
+              <img src="/logo.png" alt="" className={styles.virtusImg} style={{height: '120px'}} />
+              <h2>Virtus Baronissi</h2>
+            </div>
+            <div className={styles.vs} >
+              <h1>VS</h1>
+            </div>
+            <div className={styles.team2}>
+              <img src="/guest.webp" alt="" className={styles.guest} style={{height: '120px'}} />
+              <h2>Guest</h2>
+            </div>
           </div>
-          <div className={styles.vs}>
-            <h1>VS</h1>
-          </div>
-          <div className={styles.team2}>
-            <img src="/guest.webp" alt="" className={styles.guest} style={{width: '120px', height: '120px'}} />
-            <h2>Guest</h2>
+          <div className={`${styles.box} ${styles.responsive}`} style={{height: "fit-content"}}>
+            <div className={styles.team2}>
+              <img src="/logo.png" alt="" className={styles.virtusImg} style={{ height: '120px'}} />
+              <h2>Virtus Baronissi</h2>
+            </div>
+            <div className={styles.vs} >
+              <h1>VS</h1>
+            </div>
+            <div className={styles.team2}>
+              <img src="/guest.webp" alt="" className={styles.guest} style={{ height: '120px'}} />
+              <h2>Guest</h2>
+            </div>
           </div>
         </div>
       </div>

@@ -17,10 +17,10 @@ const Footer = () => {
                 <div className={styles.section}>
                     <h2>SOCIALS</h2>
                     <div className={styles.socials}>
-                        <span><FacebookIcon/></span>
-                        <span><InstagramIcon/></span>
-                        <span><TwitterIcon/></span>
-                        <span><LinkedInIcon/></span>
+                        <a href="https://www.facebook.com/virtusbaronissi/"><FacebookIcon/></a>
+                        <a href="https://www.instagram.com/virtus_baronissi/"><InstagramIcon/></a>
+                        {/*<a><TwitterIcon/></a>
+                        <a><LinkedInIcon/></a>*/}
                     </div>
                 </div>
                 <div className={styles.section}>

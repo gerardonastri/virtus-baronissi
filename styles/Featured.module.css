@@ -1,5 +1,5 @@
 .container{
-    
+    font-family: "Poppins", "Roboto";
 }
 .box{
     display: flex;
@@ -12,12 +12,14 @@
     background-color: white;
 }
 
+
 .box img{
     width: 230px;
     height: 180px;
 }
 .team h2{
     text-transform: uppercase;
+    text-align: center;
 }
 .last{
     text-align: center;
@@ -36,11 +38,27 @@
 .nextContainer{
     margin-top: 30px;
     background-color: #D12023;
+    padding: 30px 30px;
     display: flex;
-    justify-content: space-between;
-    padding: 30px 50px;
+    width: 100%;
 }
-
+.matchContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+.matchContainer .box{
+    width: 100%;
+    padding: 20px 10px;
+}
+.matchContainer .box img{
+    width: 180px;
+    height: 120px;
+}
+.matchContainer .vs{
+    margin: 0 30px;
+    margin-top: 30px;
+}
 .next{
     margin-top: 40px;
 }
@@ -60,8 +78,10 @@
 }
 .team2{
     text-transform: uppercase;
-    max-width: 150px;
     text-align: center;
+}
+.team2 h2{
+    margin-bottom: 0;
 }
 
 
@@ -72,8 +92,14 @@
     .nextContainer{
         flex-direction: column;
     }
+    .matchContainer{
+        grid-template-columns: 1fr 1fr;
+    }
+    .matchContainer .box img{
+        width: 150px;
+        height: 120px;
+    }
     .responsive{
-        width: 90% !important;
         margin-bottom: 20px;
     }
     .next{
@@ -94,6 +120,9 @@
         flex-direction: column;
         margin-bottom: 10px;
     }
+    .matchContainer .box{
+        padding: 10px 0;
+    }
     .team{
         text-align: center;
     }
@@ -101,6 +130,9 @@
         flex-direction: column;
         padding: 0;
         align-items: unset;
+    }
+    .matchContainer{
+        grid-template-columns: 1fr;
     }
     .next{
         text-align: center;
@@ -118,8 +150,7 @@
         height: 100px !important;
     }
     .virtusImg{
-        width: 150px !important;
-        height: 80px !important;
+        
     }
     .vs h1{
         font-size: 28px;
