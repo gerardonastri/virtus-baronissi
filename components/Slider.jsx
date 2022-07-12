@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Slider = () => {
     const [slideIndex, setIndex] = useState(0);
     const images = [
-        "/under19.jpg",
+        "/under19.png",
         "/under17.jpg",
         "/under15.jpg",
         "/minibasket1.jpg",

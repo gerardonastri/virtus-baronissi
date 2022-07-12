@@ -1,46 +1,66 @@
-import React from 'react'
-import styles from '../styles/Overview.module.css'
+import React, { useState } from 'react'
+import { useEffect } from 'react';
+import styles from '../styles/Overview.module.css';
+import {axiosReq} from '../util/apiCalls'
+import Moment from 'react-moment';
+import 'moment-timezone';
 
 
 const AdminOverview = () => {
+  const [users, setUsers] = useState(null);
+  const [news, setNews] = useState(null);
+  const [messages, setMessages] = useState(null);
+  useEffect(() => {
+    const getData = async () => {
+      const res = await axiosReq.get('info');
+      console.log(res.data);
+      setUsers(res.data.users)
+      setNews(res.data.news)
+      setMessages(res.data.messages)
+    }
+    getData()
+  }, [])
+
+
   return (
     <div className={styles.adminhome}>
       <div className={styles.featured}>
         <div className={styles.featuredItem}>
-                  <span className={styles.featuredTitle}>Revanue</span>
+                  <span className={styles.featuredTitle}>News</span>
                   <div className={styles.featuredMoneyContainer}>
-                      <span className={styles.featuredMoney}>$2,415</span>
+                      <span className={styles.featuredMoney}>{news?.length}</span>
                       <span className={styles.featuredMoneyRate}> {/*arrow down*/}
-                        -11.4 <i className={`${styles.fas}  ${styles.featuredIcon} ${styles.negative}`}></i>
+                        <i className={`${styles.fas}  ${styles.featuredIcon} ${styles.negative}`}></i>
                       </span>
                     </div>
-                    <span className={styles.featuredSub}>Compared to last month</span>
+                    <span className={styles.featuredSub}></span>
         </div>
                 <div className={styles.featuredItem}>
-                  <span className={styles.featuredTitle}>Sales</span>
+                  <span className={styles.featuredTitle}>Messaggi</span>
                   <div className={styles.featuredMoneyContainer}>
-                    <span className={styles.featuredMoney}>$4,415</span>
+                    <span className={styles.featuredMoney}>{messages?.length}</span>
                     <span className={styles.featuredMoneyRate}> {/*arrow down*/}
-                      -1.4  <i className={`${styles.fas}  ${styles.featuredIcon} ${styles.negative}`}></i>
+                       <i className={`${styles.fas}  ${styles.featuredIcon} ${styles.negative}`}></i>
                     </span>
                   </div>
-                  <span className={styles.featuredSub}>Compared to last month</span>
+                  <span className={styles.featuredSub}></span>
                 </div>
                 <div className={styles.featuredItem}>
-                  <span className={styles.featuredTitle}>Cost</span>
+                  <span className={styles.featuredTitle}>Users</span>
                   <div className={styles.featuredMoneyContainer}>
-                    <span className={styles.featuredMoney}>$2,225</span>
+                    <span className={styles.featuredMoney}>{users?.length}</span>
                     <span className={styles.featuredMoneyRate}> {/*arrow down*/}
-                      +2.4  <i className={`${styles.fas}  ${styles.featuredIcon} ${styles.negative}`}></i>
+                      <i className={`${styles.fas}  ${styles.featuredIcon} ${styles.negative}`}></i>
                     </span>
                   </div>
-                  <span className={styles.featuredSub}>Compared to last month</span>
+                  <span className={styles.featuredSub}></span>
                 </div>
       </div>
               <div className={styles.homeWidgets}>
                 <div className={styles.widgetSm}>
-                    <span className={styles.widgetSmTitle}>New Join Members</span>
+                    <span className={styles.widgetSmTitle}>Admins</span>
                     <ul className={styles.widgetSmList}>
+                      {users?.map(user => (
                         <li className={styles.widgetSmListItem}>
                           <img
                             src= "https://pbs.twimg.com/media/D8tCa48VsAA4lxn.jpg"
@@ -48,197 +68,53 @@ const AdminOverview = () => {
                             className={styles.widgetSmImg}
                           />
                           <div className={styles.widgetSmUser}>
-                            <span className={styles.widgetSmUsername}>John</span>
+                            <span className={styles.widgetSmUsername}>{user.username}</span>
                           </div>
                           <button className={styles.widgetSmButton}>
                             {/*<Visibility className={styles.widgetSmIcon}/>*/}
-                            Display
+                           <a href="/admin/user">Display</a>
                           </button>
                         </li>
-                        <li className={styles.widgetSmListItem}>
-                            <img
-                              src= "https://pbs.twimg.com/media/D8tCa48VsAA4lxn.jpg"
-                              alt=""
-                              className={styles.widgetSmImg}
-                            />
-                            <div className={styles.widgetSmUser}>
-                              <span className={styles.widgetSmUsername}>John</span>
-                            </div>
-                            <button className={styles.widgetSmButton}>
-                              {/*<Visibility className={styles.widgetSmIcon}/>*/}
-                              Display
-                            </button>
-                          </li>
-                          <li className={styles.widgetSmListItem}>
-                            <img
-                              src= "https://pbs.twimg.com/media/D8tCa48VsAA4lxn.jpg"
-                              alt=""
-                              className={styles.widgetSmImg}
-                            />
-                            <div className={styles.widgetSmUser}>
-                              <span className={styles.widgetSmUsername}>John</span>
-                            </div>
-                            <button className={styles.widgetSmButton}>
-                              {/*<Visibility className={styles.widgetSmIcon}/>*/}
-                              Display
-                            </button>
-                          </li>
-                          <li className={styles.widgetSmListItem} >
-                            <img
-                              src= "https://pbs.twimg.com/media/D8tCa48VsAA4lxn.jpg"
-                              alt=""
-                              className={styles.widgetSmImg}
-                            />
-                            <div className={styles.widgetSmUser}>
-                              <span className={styles.widgetSmUsername}>John</span>
-                            </div>
-                            <button className={styles.widgetSmButton}>
-                              {/*<Visibility className={styles.widgetSmIcon} /> */}
-                              Display
-                            </button>
-                          </li>
-                          <li className={styles.widgetSmListItem} >
-                            <img
-                              src= "https://pbs.twimg.com/media/D8tCa48VsAA4lxn.jpg"
-                              alt=""
-                              className={styles.widgetSmImg}
-                            />
-                            <div className={styles.widgetSmUser}>
-                              <span className={styles.widgetSmUsername}>John</span>
-                            </div>
-                            <button className={styles.widgetSmButton}>
-                              {/*<Visibility className={styles.widgetSmIcon} />*/}
-                              Display
-                            </button>
-                          </li>
-                          <li className={styles.widgetSmListItem} >
-                            <img
-                              src= "https://pbs.twimg.com/media/D8tCa48VsAA4lxn.jpg"
-                              alt=""
-                              className={styles.widgetSmImg}
-                            />
-                            <div className={styles.widgetSmUser}>
-                              <span className={styles.widgetSmUsername}>John</span>
-                            </div>
-                            <button className={styles.widgetSmButton}>
-                              {/*<Visibility className={styles.widgetSmIcon} />*/}
-                              Display
-                            </button>
-                          </li>
-                          <li className={styles.widgetSmListItem} >
-                            <img
-                              src= "https://pbs.twimg.com/media/D8tCa48VsAA4lxn.jpg"
-                              alt=""
-                              className={styles.widgetSmImg}
-                            />
-                            <div className={styles.widgetSmUser}>
-                              <span className={styles.widgetSmUsername}>John</span>
-                            </div>
-                            <button className={styles.widgetSmButton}>
-                              {/*<Visibility className={styles.widgetSmIcon} />*/}
-                              Display
-                            </button>
-                          </li>
-                          <li className={styles.widgetSmListItem} >
-                            <img
-                              src= "https://pbs.twimg.com/media/D8tCa48VsAA4lxn.jpg"
-                              alt=""
-                              className={styles.widgetSmImg}
-                            />
-                            <div className={styles.widgetSmUser}>
-                              <span className={styles.widgetSmUsername}>John</span>
-                            </div>
-                            <button className={styles.widgetSmButton}>
-                              {/*<Visibility className={styles.widgetSmIcon} />*/}
-                              Display
-                            </button>
-                          </li>
-                          <li className={styles.widgetSmListItem} >
-                            <img
-                              src= "https://pbs.twimg.com/media/D8tCa48VsAA4lxn.jpg"
-                              alt=""
-                              className={styles.widgetSmImg}
-                            />
-                            <div className={styles.widgetSmUser}>
-                              <span className={styles.widgetSmUsername}>John</span>
-                            </div>
-                            <button className={styles.widgetSmButton}>
-                              {/*<Visibility className={styles.widgetSmIcon} />*/}
-                              Display
-                            </button>
-                          </li>
+                      ))}
+                        
                     </ul>
                 </div>
                 <div className={styles.widgetLg}>
-                    <h3 className={styles.widgetLgTitle}>Latest transactions</h3>
+                    <h3 className={styles.widgetLgTitle} style={{marginTop: 0}}>Messaggi</h3>
                     <table className={styles.widgetLgTable}>
                      <tbody>
                      <tr className={styles.widgetLgTr}>
-                        <th className={styles.widgetLgTh}>Customer</th>
-                        <th className={styles.widgetLgTh}>Date</th>
-                        <th className={styles.widgetLgTh}>Amount</th>
+                        <th className={styles.widgetLgTh}>Nome</th>
+                        <th className={styles.widgetLgTh}>Data</th>
+                        <th className={styles.widgetLgTh}>Email</th>
                         <th className={styles.widgetLgTh}>Status</th>
                       </tr>
-                      <tr className={styles.widgetLgTr}>
-                        <td className={styles.widgetLgUser}>
-                          <img
-                            src="https://images.pexels.com/photos/4172933/pexels-photo-4172933.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            alt=""
-                            className={styles.widgetLgImg}
-                          />
-                          <span className={styles.widgetLgName}>Susan Carol</span>
-                        </td>
-                        <td className={styles.widgetLgDate}>2 Jun 2021</td>
-                        <td className={styles.widgetLgAmount}>$122.00</td>
-                        <td className={styles.widgetLgStatus}>
-                            <span className={`${styles.widgetLgButton} ${styles.Approved}`}>Approved</span>
-                        </td>
+                      {messages?.map(message => (
+                        <tr className={styles.widgetLgTr}>
+                          <td className={styles.widgetLgUser}>
+                            <img
+                              src="https://images.pexels.com/photos/4172933/pexels-photo-4172933.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                              alt=""
+                              className={styles.widgetLgImg}
+                            />
+                            <span className={styles.widgetLgName}>{message.nome}</span>
+                          </td>
+                          <td className={styles.widgetLgDate} style={{color: 'gray'}}>
+                          <Moment format="DD/MM/YYYY, hh:mm">
+                            {message.createdAt}
+                          </Moment>
+                          </td>
+                          <td className={styles.widgetLgAmount}>{message.email}</td>
+                          <td className={styles.widgetLgStatus}>
+                              {message.risposto ? (
+                                <span className={`${styles.widgetLgButton} ${styles.Approved}`}>Risposto</span>
+                              ) : (
+                                <span className={`${styles.widgetLgButton} ${styles.Pending}`}>Non Risposto</span>
+                              )}
+                          </td>
                       </tr>
-                      <tr className={styles.widgetLgTr}>
-                        <td className={styles.widgetLgUser}>
-                          <img
-                            src="https://images.pexels.com/photos/4172933/pexels-photo-4172933.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            alt=""
-                            className={styles.widgetLgImg}
-                          />
-                          <span className={styles.widgetLgName}>Susan Carol</span>
-                        </td>
-                        <td className={styles.widgetLgDate}>2 Jun 2021</td>
-                        <td className={styles.widgetLgAmount}>$122.00</td>
-                        <td className={styles.widgetLgStatus}>
-                            <span className={`${styles.widgetLgButton} ${styles.Declined}`}>Declined</span>
-                        </td>
-                      </tr>
-                      <tr className={styles.widgetLgTr}>
-                        <td className={styles.widgetLgUser}>
-                          <img
-                            src="https://images.pexels.com/photos/4172933/pexels-photo-4172933.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            alt=""
-                            className={styles.widgetLgImg}
-                          />
-                          <span className={styles.widgetLgName}>Susan Carol</span>
-                        </td>
-                        <td className={styles.widgetLgDate}>2 Jun 2021</td>
-                        <td className={styles.widgetLgAmount}>$122.00</td>
-                        <td className={styles.widgetLgStatus}>
-                            <span className={`${styles.widgetLgButton} ${styles.Pending}`}>Pending</span>
-                        </td>
-                      </tr>
-                      <tr className={styles.widgetLgTr}>
-                        <td className={styles.widgetLgUser}>
-                          <img
-                            src="https://images.pexels.com/photos/4172933/pexels-photo-4172933.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            alt=""
-                            className={styles.widgetLgImg}
-                          />
-                          <span className={styles.widgetLgName}>Susan Carol</span>
-                        </td>
-                        <td className={styles.widgetLgDate}>2 Jun 2021</td>
-                        <td className={styles.widgetLgAmount}>$122.00</td>
-                        <td className={styles.widgetLgStatus}>
-                            <span className={`${styles.widgetLgButton} ${styles.Approved}`}>Approved</span>
-                        </td>
-                      </tr>
+                      ))}
+                      
                      </tbody>
                     </table>
                   </div>
