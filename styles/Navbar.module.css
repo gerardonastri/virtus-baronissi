@@ -7,7 +7,8 @@
     /*background-color: #1C2B4B;*/
     /*background-color: #435dc9;*/
     /*background-color: #888787;*/
-    background-color: #eaeaeb;
+    /* background-color: #eaeaeb; */
+    background-color: white;
     color: white;
     position: fixed;
     top: 0;
@@ -20,6 +21,9 @@
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.6px;
+}
+.container a:hover{
+    color: #D12023;
 }
 .menu > span{
     cursor: pointer;
@@ -37,7 +41,8 @@
     position: absolute;
     top: 50px;
     left: -10px;
-    background-color: #cfcfd1;
+    /* background-color: #cfcfd1; */
+    background-color: white;
     flex-direction: column;
     text-align: start;
     padding: 0 10px;
@@ -46,6 +51,8 @@
     display: none;
     z-index: 999;
     width: max-content;
+    -webkit-box-shadow: 0px 0px 3px 0px #000000; 
+    box-shadow: 0px 0px 3px -2px #000000;
 }
 .dropdown a, .dropdown2 span{
     margin-left: 0;
@@ -112,7 +119,8 @@
         top: 100px;
         gap: 0;
         flex-direction: column;
-        background-color: #cfcfd1;
+        /* background-color: #cfcfd1; */
+        background-color: white;
         width: 100%;
         text-align: start;
         transition: 0.3s;
