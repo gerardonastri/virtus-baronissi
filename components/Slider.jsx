@@ -6,7 +6,7 @@ const Slider = () => {
     const [slideIndex, setIndex] = useState(0);
     const images = [
         "/under19.png",
-        "/under17.jpg",
+        "/under17-2.jpg",
         "/under15.jpg",
         "/minibasket1.jpg",
         "/minibasket2.jpg"
