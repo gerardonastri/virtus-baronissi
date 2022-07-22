@@ -29,6 +29,9 @@
     font-size: 14px;
     font-weight: 100;
 }
+.socials a:hover{
+    color: inherit;
+}
 .section a:hover{
     color: #D12023;
 }
