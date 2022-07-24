@@ -46,7 +46,16 @@ const Societa = () => {
 
         </div>
         <div className={styles.imgContainer}>
-            <img src="/virtus.jpg" alt="" />
+            <img src="/foto-staff-1.jpeg" alt="" />
+            <img src="/foto-staff-2.jpeg" alt="" />
+            <img src="/foto-staff-3.jpeg" alt="" />
+            <img src="/foto-staff-4.jpeg" alt="" />
+            <img src="/foto-staff-6.jpeg" alt="" />
+            <img src="/foto-staff-7.jpeg" alt="" />
+            <img src="/foto-staff-8.jpeg" alt="" />
+            <img src="/foto-staff-9.jpeg" alt="" />
+            <img src="/foto-staff-10.jpeg" alt="" />
+            
         </div>
     </div>
   )
