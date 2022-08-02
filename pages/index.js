@@ -19,9 +19,9 @@ export default function Home() {
       </Head>
       <Navbar />
       <Slider />
-      <Fetatured />
+      {/* <Fetatured /> */}
       <Societa />
-      <News />
+      {/* <News /> */}
       <Footer />
       
     </div>

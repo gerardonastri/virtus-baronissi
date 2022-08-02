@@ -33,11 +33,11 @@ const Navbar = () => {
                 <span  style={{display: 'inline-flex', alignItems: 'center'}}>
                     Corsi {showDropDown2 ? <ArrowDropUpIcon onClick={() => setShowDropDown2(prev => !prev)} /> : <ArrowDropDownIcon onClick={() => setShowDropDown2(prev => !prev)} />}
                     <div className={(showDropDown2) ? `${styles.dropdown2} ${styles.show}` : styles.dropdown2}>
-                        <span ><AccessTimeIcon /> ore 16:00-17:00 Minibasket (2016-2013) - solo lunedi</span>
+                        <span ><AccessTimeIcon /> ore 16:00-17:00 Minibasket (2015-2013) - solo lunedi</span>
                         <span ><AccessTimeIcon /> ore 17:00-18:00 Minibasket (2012-2011)</span>
-                        <span ><AccessTimeIcon /> ore 18:00-19:00 Under 15 (2010-2007)</span>
-                        <span ><AccessTimeIcon /> ore 19:00-20:15 Under 17 (2006-2005)</span>
-                        <span ><AccessTimeIcon /> ore 20:15-21:30 Under 19 (2004-2003-2002)</span>
+                        <span ><AccessTimeIcon /> ore 18:00-19:15 Under 17 (2006-2007)</span>
+                        <span ><AccessTimeIcon /> ore 19:15-20:15 Under 15 (2008-2009)</span>
+                        <span ><AccessTimeIcon /> ore 20:15-21:30 Under 19 (2004-2005)</span>
                     </div>
                 </span>
             </div>

@@ -12,10 +12,10 @@ const Societa = () => {
                 <li>Presidente: De Chiara Agostino</li>
                 <li>Vice presidente: Spisso Aniello</li>
                 <li>Segretario: De chiara Valeria</li>
-                <li>Allenatore under 19: Abundo Carlo</li>
-                <li>Allenatore under 17: Spisso Gerardo/Di Giuseppe Alessio</li>
-                <li>Allenatore under 17: Di Giuseppe Alessio/Senatore Attilio</li>
-                <li>Istruttori minibasket: Rizzo Michele - Spisso Gerardo - Senatore Attilio - Di Giuseppe Alessio</li>
+                <li>Allenatore under 19: Spisso Gerardo</li>
+                <li>Allenatore under 17: Di Giuseppe Alessio</li>
+                <li>Allenatore under 15: Abundo Carlo</li>
+                <li>Istruttori minibasket: Rizzo Michele - Spisso Gerardo - Senatore Attilio - Leonardo Pane</li>
             </ul>
             <h3 style={{marginBottom: '10px'}}>Sede</h3>
             <p>VIA MARCONI, 13 C/O DE CHIARA Agostino 84081 BARONISSI (SA)</p>
@@ -29,19 +29,20 @@ const Societa = () => {
             <h3 style={{marginBottom: '10px'}}>Corsi</h3>
             <p>Lunedi - Mercoledi - Venerdi</p>
             <ul>
-                <li>ore 16:00-17:00 Minibasket (2016-2013) - solo lunedi</li>
+                <li>ore 16:00-17:00 Minibasket (2015-2013) - solo lunedi</li>
                 <li>ore 17:00-18:00 Minibasket (2012-2011)</li>
-                <li>ore 18:00-19:00 Under 15 (2010-2007)</li>
-                <li>ore 19:00-20:15 Under 17 (2006-2005)</li>
-                <li>ore 20:15-21:30 Under 19 (2004-2003-2002)</li>
+                <li>ore 18:00-19:15 Under 17 (2006-2007)</li>
+                <li>ore 19:15-20:15 Under 15 (2008-2009)</li>
+                <li>ore 20:15-21:30 Under 19 (2004-2005)</li>
             </ul>
             <p>Martedi - Giovedi</p>
             <ul>
-                <li>ore 16:30-17:30 Minibasket (2016-2013)</li>
+                <li>ore 15:30-16:30 Minibasket (2018-2016)</li>
+                <li>ore 16:30-17:30 Minibasket (2015-2013)</li>
             </ul>
             <p>Sabato</p>
             <ul>
-                <li>ore 16:00-17:30 Under 19 (2004-2003-2002)</li>
+                <li>ore 11:30-13:00 Under 19 (2004-2005)</li>
             </ul>
 
         </div>
