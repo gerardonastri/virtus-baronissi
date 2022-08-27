@@ -86,7 +86,7 @@ const AdminOverview = () => {
                      <tr className={styles.widgetLgTr}>
                         <th className={styles.widgetLgTh}>Nome</th>
                         <th className={styles.widgetLgTh}>Data</th>
-                        <th className={styles.widgetLgTh}>Email</th>
+                        <th className={`${styles.widgetLgTh} ${styles.email}`}>Email</th>
                         <th className={styles.widgetLgTh}>Status</th>
                       </tr>
                       {messages?.map(message => (
@@ -104,7 +104,7 @@ const AdminOverview = () => {
                             {message.createdAt}
                           </Moment>
                           </td>
-                          <td className={styles.widgetLgAmount}>{message.email}</td>
+                          <td className={`${styles.widgetLgAmount} ${styles.email}` }>{message.email}</td>
                           <td className={styles.widgetLgStatus}>
                               {message.risposto ? (
                                 <span className={`${styles.widgetLgButton} ${styles.Approved}`}>Risposto</span>

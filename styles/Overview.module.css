@@ -95,6 +95,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .featuredItem {
@@ -353,7 +354,9 @@
 
 @media (max-width: 700px) {
   .featured {
-    display: none;
+    /* display: none; */
+    flex-wrap: wrap;
+    gap: 20px;
   }
 
   .homeWidgets {
@@ -366,7 +369,7 @@
 }
 @media screen and (max-width: 550px) {
   .widgetSm {
-    width: fit-content;
+    width: 100%;
 
   }
   .widgetSmListItem{
@@ -379,6 +382,9 @@
     margin-left: 20px;
   }
   .widgetLg{
+    
+  }
+  .email{
     display: none;
   }
 }
