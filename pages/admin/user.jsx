@@ -77,7 +77,7 @@ const user = () => {
                                     <td>{data._id}</td>
                                     <td>{data.username}</td>
                                     <td>{data.email}</td>
-                                    <td className={styles.password}>{data.password}</td>
+                                    <td className={styles.password}>{data.password.slice(0,40)}</td>
                                     <td>
                                         <a href="#" className={`${styles.btn } ${styles.bordershadow} ${styles.update}`}>
                                             <span className={styles.textgradient} style={{color: 'white'}}><EditOutlinedIcon /></span>
