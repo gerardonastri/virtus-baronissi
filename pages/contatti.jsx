@@ -25,13 +25,13 @@ export default function Contatti() {
             try {
                 emailjs.sendForm('service_x4osu07', 'template_c0ixuut', form.current, 'A9K522M2XZ5oy_Z8a')
                 .then( async (result) => {
-                    // const res = await axiosReq.post('message', {
-                    //     nome,
-                    //     telefono,
-                    //     email,
-                    //     messaggio
-                    // })
-                    // router.reload()
+                    const res = await axiosReq.post('message', {
+                        nome,
+                        telefono,
+                        email,
+                        messaggio
+                    })
+                    router.reload()
                 }, (error) => {
                     console.log(error.text);
                 });
