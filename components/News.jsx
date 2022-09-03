@@ -25,7 +25,7 @@ const News = () => {
     <>
         {news?.length > 0 && (
             <div className={styles.container}>
-            <h1>Recent News</h1>
+            <h1>News Recenti</h1>
             <div className={styles.wrapper}>
                 {news?.map(news => (
                     <div className={styles.card}>
@@ -36,7 +36,7 @@ const News = () => {
                             Jun 16, 2022
                         </span>
                         <p className={styles.desc}>{news.desc.slice(0,80)}...</p>
-                        <a href={`/news/${news._id}`} className={styles.more}>READ MORE <ArrowForwardIcon /> </a>
+                        <a href={`/news/${news._id}`} className={styles.more}>Leggi di più <ArrowForwardIcon /> </a>
                     </div>
                 ))}
             </div>

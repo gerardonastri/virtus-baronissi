@@ -10,11 +10,11 @@
     margin-left: 50px;
     background-color: #eaeaeb;
     padding: 50px 20px;
-    max-width: 40%;
+    max-width: 50%;
+    font-family: 'Open Sans', sans-serif;;
 }
 
 .societa h1{
-    max-width: 60%;
     margin-top: 10px;
     font-weight: 500;
 }
@@ -25,13 +25,17 @@
 }
 
 .societa h3{
-    color: gray;
+    color: rgb(134, 13, 38);
 }
 
 .societa li{
     margin-bottom: 3px;
     color: rgb(63, 60, 60);
-    list-style:square;
+    color: black;
+    list-style: circle;
+}
+.societa  b{
+    color: #1C2B4B;
 }
 .societa p{
     color: rgb(63, 60, 60);

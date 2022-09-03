@@ -44,7 +44,7 @@ const Squadra = () => {
             <div className={styles.otherNews}>
                 {news?.length > 0 &&  (
                     <>
-                    <h2>Other News</h2>
+                    <h2>Altre News</h2>
                     <hr />
                     {news?.map(news => (
                         <a href={`/news/${news._id}`} className={styles.sigleNew}>

@@ -51,7 +51,7 @@ const news = () => {
                      Jun 16, 2022
                  </span>
                  <p className={styles.desc}>{news.desc.slice(0,100)}...</p>
-                 <a href={`/news/${news._id}`}  className={styles.more}>READ MORE <ArrowForwardIcon /> </a>
+                 <a href={`/news/${news._id}`}  className={styles.more}>Leggi di più <ArrowForwardIcon /> </a>
                 </div>
             ))}
         </div>
