@@ -44,7 +44,7 @@ export default function Contatti() {
         <div className={styles.wrapper}>
             <h1>Contattaci</h1>
           <div className={styles.desc}>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dolores enim recusandae illo beatae consequatur, incidunt, animi adipisci voluptates quam pariatur. Nostrum, quidem odit tenetur optio blanditiis rerum repellendus voluptas.</p>
+            {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dolores enim recusandae illo beatae consequatur, incidunt, animi adipisci voluptates quam pariatur. Nostrum, quidem odit tenetur optio blanditiis rerum repellendus voluptas.</p> */}
           </div>
             <div className={styles.info}>
                 <div className={styles.single}>

@@ -42,17 +42,21 @@ const Squadra = () => {
                 <img src={data?.coverImg} alt="" />
             </div>
             <div className={styles.otherNews}>
-                <h2>Other News</h2>
-                <hr />
-                {news?.map(news => (
-                    <a href={`/news/${news._id}`} className={styles.sigleNew}>
-                        <h3>{news.title}</h3>
-                        <span className={styles.time}>
-                        <AccessTimeIcon />
-                        Jun 16, 2022
-                        </span>
-                    </a>
-                ))}
+                {news?.length > 0 &&  (
+                    <>
+                    <h2>Other News</h2>
+                    <hr />
+                    {news?.map(news => (
+                        <a href={`/news/${news._id}`} className={styles.sigleNew}>
+                            <h3>{news.title}</h3>
+                            <span className={styles.time}>
+                            <AccessTimeIcon />
+                            Jun 16, 2022
+                            </span>
+                        </a>
+                    ))}
+                    </>
+                )}
             </div>
         </div>
             <div className={styles.body}>

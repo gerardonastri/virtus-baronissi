@@ -50,7 +50,7 @@ const news = () => {
                      <AccessTimeIcon />
                      Jun 16, 2022
                  </span>
-                 <p className={styles.desc}>{news.desc}</p>
+                 <p className={styles.desc}>{news.desc.slice(0,100)}...</p>
                  <a href={`/news/${news._id}`}  className={styles.more}>READ MORE <ArrowForwardIcon /> </a>
                 </div>
             ))}

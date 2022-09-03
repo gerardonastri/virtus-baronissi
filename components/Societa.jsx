@@ -5,7 +5,6 @@ const Societa = () => {
   return (
     <div className={styles.container}>
         <div className={styles.societa}>
-            <span>SOCIETA</span>
             <h1>Polisportiva Dilettantistica Virtus Baronissi dal 2000</h1>
             <h3>Staff</h3>
             <ul>
@@ -22,7 +21,7 @@ const Societa = () => {
 
             <h3 style={{marginBottom: '10px'}}>Campo di gioco</h3>
             <p>Palestra Palairno Nando Nobile</p>
-            <p>Via G. Fortunato 22</p>
+            <p>Via G. Fortunato 22 Baronissi</p>
             <p>TEL. 3921392228</p>
             <p>CF: 95089310650  Dona il tuo 5x1000 </p>
 

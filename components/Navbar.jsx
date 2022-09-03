@@ -22,6 +22,7 @@ const Navbar = () => {
                 <a href="/">Home</a>
                 <a href="/contatti">Contatti</a>
                 <a href="/news">News</a>
+                <a href="/corsi">Corsi</a>
                 <span style={{display: 'inline-flex', alignItems: 'center'}}>
                     Giovanili {showDropDown ? <ArrowDropUpIcon onClick={() => setShowDropDown(prev => !prev)} /> : <ArrowDropDownIcon onClick={() => {setShowDropDown(prev => !prev); setShowDropDown2(false)}} />}
                     <div className={(showDropDown) ? `${styles.dropdown} ${styles.show}` : styles.dropdown}>
@@ -37,7 +38,7 @@ const Navbar = () => {
                         <a href="/squadra/esordienti"><SportsBasketballIcon /> Esordienti</a>
                     </div>
                 </span>
-                <span  style={{display: 'inline-flex', alignItems: 'center'}}>
+                {/* <span  style={{display: 'inline-flex', alignItems: 'center'}}>
                     Corsi {showDropDown2 ? <ArrowDropUpIcon onClick={() => setShowDropDown2(prev => !prev)} /> : <ArrowDropDownIcon onClick={() => setShowDropDown2(prev => !prev)} />}
                     <div className={(showDropDown2) ? `${styles.dropdown2} ${styles.show}` : styles.dropdown2}>
                         <span ><AccessTimeIcon /> ore 16:00-17:00 Minibasket (2015-2013) - solo lunedi</span>
@@ -46,7 +47,7 @@ const Navbar = () => {
                         <span ><AccessTimeIcon /> ore 19:15-20:15 Under 15 (2008-2009)</span>
                         <span ><AccessTimeIcon /> ore 20:15-21:30 Under 19 (2004-2005)</span>
                     </div>
-                </span>
+                </span> */}
             </div>
             <div onClick={() => {
                 setIsActive(prev => !prev);
