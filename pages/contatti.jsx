@@ -86,10 +86,10 @@ export default function Contatti() {
                     <h2>I TUOI DATI</h2>
                     <span className={styles.error}>{error && error}</span>
                     <div className={styles.formFlex}>
-                        <input type="text" name="user_name"  placeholder='Nome' value={nome} onChange={(e) => setNome(e.target.value)} />
+                        <input type="text" name="name"  placeholder='Nome' value={nome} onChange={(e) => setNome(e.target.value)} />
                         <input type="text" name="phone" placeholder='Telefono'  value={telefono} onChange={(e) => setTelefono(e.target.value)} />
                     </div>
-                    <input type="email" name="user_email"  placeholder='Email'  value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <input type="email" name="from_name"  placeholder='Email'  value={email} onChange={(e) => setEmail(e.target.value)} />
                     <textarea name="message"  id="" cols="30" rows="10" placeholder='Messaggio'  defaultValue={messaggio} onChange={(e) => setMessaggio(e.target.value)}></textarea>
                     <button onClick={handleSubmit} style={{cursor: 'pointer'}}>Invia messaggio</button>
                 </form>
