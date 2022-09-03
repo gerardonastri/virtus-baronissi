@@ -23,12 +23,7 @@ export default function Contatti() {
         e.preventDefault()
         if(nome.length && telefono.length && email.length && messaggio.length){
             try {
-                const template__params = {
-                    "name": nome,
-                    "email": email,
-                    "message": messaggio
-                 }
-                emailjs.sendForm('service_x4osu07', 'template_c0ixuut', template__params, 'A9K522M2XZ5oy_Z8a')
+                emailjs.sendForm('service_x4osu07', 'template_c0ixuut', form.current, 'A9K522M2XZ5oy_Z8a')
                 .then( async () => {
                     await axiosReq.post('message', {
                         nome,
@@ -94,7 +89,7 @@ export default function Contatti() {
                         <input type="text" name="name"  placeholder='Nome' value={nome} onChange={(e) => setNome(e.target.value)} />
                         <input type="text" name="phone" placeholder='Telefono'  value={telefono} onChange={(e) => setTelefono(e.target.value)} />
                     </div>
-                    <input type="email" name="from_name"  placeholder='Email'  value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <input type="email" name="email"  placeholder='Email'  value={email} onChange={(e) => setEmail(e.target.value)} />
                     <textarea name="message"  id="" cols="30" rows="10" placeholder='Messaggio'  defaultValue={messaggio} onChange={(e) => setMessaggio(e.target.value)}></textarea>
                     <button onClick={handleSubmit} style={{cursor: 'pointer'}}>Invia messaggio</button>
                 </form>
