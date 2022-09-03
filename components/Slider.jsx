@@ -19,7 +19,6 @@ const Slider = () => {
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <h1>Staff</h1>
                 <div className={styles.embla} ref={emblaRef}>
                     <div className={styles.embla__container}>
                         <div className={styles.embla__slide}>
