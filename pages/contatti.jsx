@@ -28,7 +28,7 @@ export default function Contatti() {
                     "email": email,
                     "message": messaggio
                  }
-                emailjs.sendForm('service_x4osu07', 'template_c0ixuut', params, 'A9K522M2XZ5oy_Z8a')
+                emailjs.sendForm('service_x4osu07', 'template_c0ixuut', template__params, 'A9K522M2XZ5oy_Z8a')
                 .then( async () => {
                     await axiosReq.post('message', {
                         nome,
