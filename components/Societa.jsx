@@ -29,11 +29,11 @@ const Societa = () => {
             <h3 style={{marginBottom: '10px'}}>Corsi</h3>
             <p>Lunedi - Mercoledi - Venerdi</p>
             <ul>
-                <li>ore 16:00-17:00 Minibasket (2015-2013) - solo lunedi</li>
+                <li>ore 16:00-17:00 Minibasket (2015-2013) - solo lunedì</li>
                 <li>ore 17:00-18:00 Minibasket (2012-2011)</li>
                 <li>ore 18:00-19:15 Under 17 (2006-2007)</li>
-                <li>ore 19:15-20:15 Under 15 (2008-2009)</li>
-                <li>ore 20:15-21:30 Under 19 (2004-2005)</li>
+                <li>ore 19:15-20:15 Under 15 (2008-2010)</li>
+                <li>ore 20:15-21:30 Under 19 (2004-2005) - solo Mercoledì e Venerdì</li>
             </ul>
             <p>Martedi - Giovedi</p>
             <ul>
@@ -42,7 +42,7 @@ const Societa = () => {
             </ul>
             <p>Sabato</p>
             <ul>
-                <li>ore 11:30-13:00 Under 19 (2004-2005)</li>
+                <li>ore 11:00-13:00 Under 19 (2004-2005)</li>
             </ul>
 
         </div>

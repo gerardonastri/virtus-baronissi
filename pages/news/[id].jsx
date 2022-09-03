@@ -35,24 +35,26 @@ const Squadra = () => {
     <div className={styles.container}>
         <Navbar />
         <div className={styles.wrapper}>
-            <h1>{data?.title}</h1>
-            <div className={styles.flex}>
+        <div className={styles.flex}>
+            <div>
+                <h1>{data?.title}</h1>
+                <p>{data?.desc}</p>
                 <img src={data?.coverImg} alt="" />
-                <div className={styles.otherNews}>
-                    <h2>Other News</h2>
-                    <hr />
-                    {news?.map(news => (
-                        <div className={styles.sigleNew}>
+            </div>
+            <div className={styles.otherNews}>
+                <h2>Other News</h2>
+                <hr />
+                {news?.map(news => (
+                    <a href={`/news/${news._id}`} className={styles.sigleNew}>
                         <h3>{news.title}</h3>
                         <span className={styles.time}>
                         <AccessTimeIcon />
                         Jun 16, 2022
                         </span>
-                        </div>
-                    ))}
-                </div>
+                    </a>
+                ))}
             </div>
-            <p>{data?.desc}</p>
+        </div>
             <div className={styles.body}>
                 {data?.body}
             </div>

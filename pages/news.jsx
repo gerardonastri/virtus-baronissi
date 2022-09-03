@@ -11,7 +11,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 const news = () => {
     const [news, SetNews] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
-    const [newsPerPage, setNewsPerPage] = useState(8);
+    const [newsPerPage, setNewsPerPage] = useState(6);
     
 
     useEffect(() => {
@@ -40,7 +40,8 @@ const news = () => {
     <Navbar />
     <div className={styles.wrapper}>
         <h1>News</h1>
-        <div className={styles.newsContainer}>
+        {news?.length > 0 ? (
+            <div className={styles.newsContainer}>
             {news?.map(news => (
                 <div className={styles.card}>
                  <img src={news.coverImg} alt="" />
@@ -54,6 +55,9 @@ const news = () => {
                 </div>
             ))}
         </div>
+        ) : (
+            <h3 className={styles.nonews}>Non ci sono novità</h3>
+        )}
         <Pages onChange={(e) => handleChange(e.target.textContent)} sx={{display: 'flex', justifyContent: 'flex-end', marginTop: '10px'}} count={Math.ceil(news?.length / newsPerPage)} />
     </div>
 

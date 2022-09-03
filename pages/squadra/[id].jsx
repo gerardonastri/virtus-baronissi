@@ -115,7 +115,7 @@ const Squadra = () => {
         <h1 className={styles.teamName}>{id?.toUpperCase()}</h1>
         <div className={styles.wrapper}>
 
-            <div className={styles.section}>
+            {/* <div className={styles.section}>
                 <h2 style={styles.sectionTitle}>Roaster</h2>
                 <div className={styles.classifica}>
                      <TableContainer component={Paper} sx={{width: '100%'}}>
@@ -217,10 +217,10 @@ const Squadra = () => {
                         </TableContainer>
                     </div>
                 </div>
-            </div>
+            </div>*/}
 
         </div>
-        <Pagination squadra={id && id} images={data && data.images} />
+        {/* <Pagination squadra={id && id} images={data && data.images} />  */}
         <Footer />
     </div>
   )

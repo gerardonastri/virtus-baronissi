@@ -44,7 +44,7 @@ const Footer = () => {
                         </span>
                         <span> 
                             <LocalPhoneIcon />
-                            +3921392228
+                            <a href="tel://+3921392228">+3921392228</a>
                         </span>
                         <span>
                             <EmailOutlinedIcon/>

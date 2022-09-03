@@ -21,7 +21,7 @@ export default function Home() {
       <Slider />
       {/* <Fetatured /> */}
       <Societa />
-      {/* <News /> */}
+      <News />
       <Footer />
       
     </div>
