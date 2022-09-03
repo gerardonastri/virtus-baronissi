@@ -23,9 +23,14 @@ export default function Contatti() {
         e.preventDefault()
         if(nome.length && telefono.length && email.length && messaggio.length){
             try {
-                emailjs.sendForm('service_x4osu07', 'template_c0ixuut', form.current, 'A9K522M2XZ5oy_Z8a')
-                .then( async (result) => {
-                    const res = await axiosReq.post('message', {
+                const template__params = {
+                    "name": nome,
+                    "email": email,
+                    "message": messaggio
+                 }
+                emailjs.sendForm('service_x4osu07', 'template_c0ixuut', params, 'A9K522M2XZ5oy_Z8a')
+                .then( async () => {
+                    await axiosReq.post('message', {
                         nome,
                         telefono,
                         email,
