@@ -12,6 +12,7 @@ const Navbar = () => {
     const [isActive, setIsActive] = useState(false);
     const [showDropDown, setShowDropDown] = useState(false);
     const [showDropDown2, setShowDropDown2] = useState(false);
+    const [showDropDown3, setShowDropDown3] = useState(false);
 
   return (
     <div className={styles.container}>
@@ -27,7 +28,13 @@ const Navbar = () => {
                         <a href="/squadra/under19"><SportsBasketballIcon /> Under 19</a>
                         <a href="/squadra/under17"><SportsBasketballIcon /> Under 17</a>
                         <a href="/squadra/under15"><SportsBasketballIcon /> Under 15</a>
+                    </div>
+                </span>
+                <span style={{display: 'inline-flex', alignItems: 'center'}}>
+                    Minibasket {showDropDown3 ? <ArrowDropUpIcon onClick={() => setShowDropDown3(prev => !prev)} /> : <ArrowDropDownIcon onClick={() => {setShowDropDown3(prev => !prev); setShowDropDown(false); setShowDropDown2(false)}} />}
+                    <div className={(showDropDown3) ? `${styles.dropdown} ${styles.show}` : styles.dropdown}>
                         <a href="/squadra/minibasket"><SportsBasketballIcon /> Minibasket</a>
+                        <a href="/squadra/esordienti"><SportsBasketballIcon /> Esordienti</a>
                     </div>
                 </span>
                 <span  style={{display: 'inline-flex', alignItems: 'center'}}>
@@ -44,6 +51,8 @@ const Navbar = () => {
             <div onClick={() => {
                 setIsActive(prev => !prev);
                 setShowDropDown(false)
+                setShowDropDown2(false)
+                setShowDropDown3(false)
             }} className={isActive ? `${styles.hamburger} ${styles.active}` : styles.hamburger}>
                 <span className={styles.bar}></span>
                 <span className={styles.bar}></span>

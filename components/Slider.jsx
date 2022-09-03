@@ -1,66 +1,50 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 import styles from '../styles/Slider.module.css'
-import Image from 'next/image';
+import useEmblaCarousel from 'embla-carousel-react'
+import {HiOutlineArrowLeft} from 'react-icons/hi'
+import {HiOutlineArrowRight} from 'react-icons/hi'
 
 const Slider = () => {
-    const [slideIndex, setIndex] = useState(0);
-    const images = [
-        "/under19.png",
-        "/under17-2.jpg",
-        "/under15.jpg",
-        "/minibasket1.jpg",
-        "/minibasket2.jpg"
-    ]
-    const teams = [
-        'Under 19',
-        'Under 17',
-        'Under 15',
-        'Aquilotti',
-        'Pulcini'
-    ]
-    const links = [
-        "under19",
-        "under17",
-        "under15",
-        "minibasket"
-    ]
-    const handleArrow = (direction) =>{
-        if(direction==="l"){
-            setIndex(slideIndex !== 0 ? slideIndex-1 : 4)
-        }
-        if(direction==="r"){
-            setIndex(slideIndex !== 4 ? slideIndex+1 : 0)
-        }
-    }
-
-    const moveDot = (index) => {
-        setIndex(index)
-    }
+    const [emblaRef, emblaApi] = useEmblaCarousel()
+    
+    const scrollPrev = useCallback(() => {
+        if (emblaApi) emblaApi.scrollPrev()
+      }, [emblaApi])
+    
+      const scrollNext = useCallback(() => {
+        if (emblaApi) emblaApi.scrollNext()
+      }, [emblaApi])
+    
 
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                {images.map((img, i) => (
-                    <div className={slideIndex === i ? `${styles.slide} ${styles.activeAnim}`: styles.slide}  key={i}>
-                        <a href={`/squadra/${links[i]}`} className={styles.team}>{teams[i]}</a>
-                        <img src={img} alt="" />
-                    </div>
-                ))}
-
-                <button className={`${styles.btnSlide} ${styles.prev}`} onClick={() => handleArrow('l')}>
-                    <img src="/left-arrow.svg" alt="" />
-                </button>
-
-                <button className={`${styles.btnSlide} ${styles.next}`} onClick={() => handleArrow('r')}>
-                    <img src="/right-arrow.svg" alt="" />
-                </button>
-
-                <div className={styles.containerDots}>
-                    {Array.from({length: 5}).map((item, index) => (
-                        <div onClick={() => moveDot(index)} className={slideIndex === index ? `${styles.dot} ${styles.active}` : styles.dot}>
-
+                <h1>Staff</h1>
+                <div className={styles.embla} ref={emblaRef}>
+                    <div className={styles.embla__container}>
+                        <div className={styles.embla__slide}>
+                            <img src="foto-staff-1.jpeg" alt="" />
+                            <img src="foto-staff-2.jpeg" alt="" />
+                            <img src="foto-staff-3.jpeg" alt="" />
+                            <img src="foto-staff-4.jpeg" alt="" />
                         </div>
-                    ))}
+                        <div className={styles.embla__slide}>
+                            <img src="foto-staff-6.jpeg" alt="" />
+                            <img src="foto-staff-7.jpeg" alt="" />
+                            <img src="foto-staff-8.jpeg" alt="" />
+                            <img src="foto-staff-9.jpeg" alt="" />
+                        </div>
+                        <div className={styles.embla__slide}>
+                            <img src="foto-staff-10.jpeg" alt="" />
+                            <img src="foto-staff-11.jpeg" alt="" />
+                        </div>
+                    </div>
+                    <button className={styles.embla__prev} onClick={scrollPrev}>
+                        <HiOutlineArrowLeft />
+                    </button>
+                    <button className={styles.embla__next} onClick={scrollNext}>
+                        <HiOutlineArrowRight />
+                    </button>
                 </div>
             </div>
       </div>

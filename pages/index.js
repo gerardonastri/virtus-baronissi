@@ -19,6 +19,9 @@ export default function Home() {
       </Head>
       <Navbar />
       <Slider />
+      {/* <div className={styles.featuredImg}>
+        <img src='/featured-img.jpeg' alt='featured img' />
+      </div> */}
       {/* <Fetatured /> */}
       <Societa />
       <News />

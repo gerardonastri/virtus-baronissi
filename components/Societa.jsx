@@ -6,12 +6,12 @@ const Societa = () => {
     <div className={styles.container}>
         <div className={styles.societa}>
             <span>SOCIETA</span>
-            <h1>Polisportiva dilettantistica virtus baronissi dal 2000</h1>
+            <h1>Polisportiva Dilettantistica Virtus Baronissi dal 2000</h1>
             <h3>Staff</h3>
             <ul>
                 <li>Presidente: De Chiara Agostino</li>
                 <li>Vice presidente: Spisso Aniello</li>
-                <li>Segretario: De chiara Valeria</li>
+                <li>Segretario: De Chiara Valeria</li>
                 <li>Allenatore under 19: Spisso Gerardo</li>
                 <li>Allenatore under 17: Di Giuseppe Alessio</li>
                 <li>Allenatore under 15: Abundo Carlo</li>
@@ -46,7 +46,7 @@ const Societa = () => {
             </ul>
 
         </div>
-        <div className={styles.imgContainer}>
+        {/* <div className={styles.imgContainer}>
             <img src="/foto-staff-1.jpeg" alt="" />
             <img src="/foto-staff-2.jpeg" alt="" />
             <img src="/foto-staff-3.jpeg" alt="" />
@@ -57,6 +57,9 @@ const Societa = () => {
             <img src="/foto-staff-9.jpeg" alt="" />
             <img src="/foto-staff-10.jpeg" alt="" />
             
+        </div> */}
+        <div className={styles.featuredImg}>
+            <img src='/featured-img.jpeg' alt='featured img' />
         </div>
     </div>
   )
