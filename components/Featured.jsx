@@ -38,14 +38,14 @@ const Fetatured = () => {
       <h1 className={styles.last}>ULTIMO INCONTRO</h1>
       <div className={styles.box}>
         <div className={styles.team}>
-          <img src="/logo.png" alt="" />
+          <img src="/logo.png" alt="logo virtus" />
           <h2>Virtus Baronissi</h2>
         </div>
         <div className={styles.punteggio}>
           <h1>{lastMatch?.virtusScore} - {lastMatch?.opposingTeamScore}</h1>
         </div>
         <div className={styles.team}>
-          <img src={lastMatch?.opposingTeamImg} alt="" />
+          <img src={lastMatch?.opposingTeamImg} alt="logo squadra avversaria" />
           <h2>{lastMatch?.opposingTeam}</h2>
         </div>
       </div>

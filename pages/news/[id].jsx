@@ -4,6 +4,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { axiosReq } from '../../util/apiCalls';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import Head from 'next/head';
 
 
 
@@ -33,6 +34,11 @@ const Squadra = () => {
 
   return (
     <div className={styles.container}>
+        <Head>
+            <title>Virtus baronissi | News</title>
+            <meta name="description" content="News della virtus baronissi" />
+            <link rel="icon" href="http://www.virtusbaronissi.altervista.org/varie/LOGO.jpg" />
+        </Head>
         <Navbar />
         <div className={styles.wrapper}>
         <div className={styles.flex}>

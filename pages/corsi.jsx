@@ -7,11 +7,17 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import {axiosReq} from '../util/apiCalls'
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 
 const Corsi = () => {
   return (
     <div className={styles.container}> 
+      <Head>
+        <title>Virtus baronissi | Corsi</title>
+        <meta name="description" content="Corsi della virtus baronissi" />
+        <link rel="icon" href="http://www.virtusbaronissi.altervista.org/varie/LOGO.jpg" />
+      </Head>
     <Navbar />
     <div className={styles.wrapper}>
         <h1>Corsi</h1>

@@ -13,6 +13,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
+        #virtus #baronissi #virtusbaronissi #palairno #irno #valle #basket #pallacanestro #mini #minibasket #polisportiva #dilettantistica #ginnastica #dolce #corsi #under13 #under14 #under15 #under16 #under17 #under18 #under19 #esordienti
         <title>Virtus baronissi</title>
         <meta name="description" content="Sito della virtu baronissi" />
         <link rel="icon" href="http://www.virtusbaronissi.altervista.org/varie/LOGO.jpg" />

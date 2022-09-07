@@ -29,7 +29,7 @@ const News = () => {
             <div className={styles.wrapper}>
                 {news?.map(news => (
                     <div className={styles.card}>
-                        <img src={news.coverImg} alt="" />
+                        <img src={news.coverImg} alt="immagine della news" />
                         <h3 className={styles.title}>{news.title}</h3>
                         <span className={styles.time}>
                             <AccessTimeIcon />

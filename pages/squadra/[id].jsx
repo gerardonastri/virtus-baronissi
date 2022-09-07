@@ -15,6 +15,7 @@ import Paper from '@mui/material/Paper';
 import { DataGrid } from '@mui/x-data-grid';
 import  Pagination  from  '../../components/Pagination';
 import { axiosReq } from '../../util/apiCalls';
+import Head from 'next/head';
 
 
 
@@ -111,6 +112,11 @@ const Squadra = () => {
 
   return (
     <div className={styles.container}>
+        <Head>
+            <title>Virtus baronissi | {id && id}</title>
+            <meta name="description" content="Giovanili della virtus baronissi" />
+            <link rel="icon" href="http://www.virtusbaronissi.altervista.org/varie/LOGO.jpg" />
+        </Head>
         <Navbar />
         <h1 className={styles.teamName}>{id?.toUpperCase()}</h1>
         <div className={styles.wrapper}>
