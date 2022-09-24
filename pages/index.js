@@ -16,7 +16,10 @@ export default function Home() {
       
         <title>Virtus baronissi</title>
         <meta name="description" content="Sito della virtu baronissi" />
-        <meta name="Virtus Baronissi" content=" virtus, baronissi, virtusbaronissi, palairno, irno, valle, basket, pallacanestro, mini, minibasket, polisportiva, dilettantistica, ginnastica, dolce, corsi, under13, under14, under15, under16, under17, under18, under19, esordienti, sport, gioco, palanandonobile, palestra, bambini, ragazzi, palanobile, palazzetto, impianto, sportivo" />
+        {/* <meta id="MetaKeyWords" HTTP-EQUIV="Keywords" content="virtus, baronissi, virtusbaronissi, palairno, irno, valle, basket, pallacanestro, mini, minibasket, polisportiva, dilettantistica, ginnastica, dolce, corsi, under13, under14, under15, under16, under17, under18, under19, esordienti, sport, gioco, palanandonobile, palestra, bambini, ragazzi, palanobile, palazzetto, impianto, sportivo" /> */}
+        <meta id="MetaKeyWords" HTTP-EQUIV="Keywords" content="virtus baronissi virtusbaronissi palairno irno valle basket pallacanestro mini minibasket polisportiva dilettantistica ginnastica dolce corsi under13 under14 under15 under16 under17 under18 under19 esordienti sport gioco palanandonobile palestra bambini ragazzi palanobile palazzetto impianto sportivo" />
+        <meta name="author" content="Virtus Baronissi" />
+        <meta name="copyright" content="Copyright 2022 virtus baronissi" />
         <link rel="icon" href="http://www.virtusbaronissi.altervista.org/varie/LOGO.jpg" />
       </Head>
       <Navbar />
