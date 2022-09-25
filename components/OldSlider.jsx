@@ -43,7 +43,7 @@ const OldSlider = () => {
             {images.map((img, i) => (
                     <div className={slideIndex === i ? `${styles.slide} ${styles.activeAnim}`: styles.slide}  key={i}>
                         <a href={`/squadra/${links[i]}`} className={styles.team}>{teams[i]}</a>
-                        <img src={img} alt="" />
+                        <img src={img} alt="virtus baronissi" />
                     </div>
                 ))}
 

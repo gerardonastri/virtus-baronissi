@@ -38,7 +38,7 @@ const Fetatured = () => {
       <h1 className={styles.last}>ULTIMO INCONTRO</h1>
       <div className={styles.box}>
         <div className={styles.team}>
-          <img src="/logo.png" alt="logo virtus" />
+          <img src="/logo.png" alt="logo virtus baronissi" />
           <h2>Virtus Baronissi</h2>
         </div>
         <div className={styles.punteggio}>
@@ -59,14 +59,14 @@ const Fetatured = () => {
           {nextMatches?.map(match => (
           <div className={`${styles.box} ${styles.responsive}`} style={{height: "fit-content"}}>
             <div className={styles.team2}>
-              <img src="/logo.png" className={styles.virtusImg} alt="" style={{ height: '120px'}} />
+              <img src="/logo.png" className={styles.virtusImg} alt="virtus baronissi" style={{ height: '120px'}} />
               <h2>Virtus Baronissi</h2>
             </div>
             <div className={styles.vs} >
               <h1>VS</h1>
             </div>
             <div className={styles.team2}>
-              <img src={match.opposingTeamImg} className={styles.guest} alt="" style={{ height: '120px'}} />
+              <img src={match.opposingTeamImg} className={styles.guest} alt="logo squadra avversaria" style={{ height: '120px'}} />
               <h2>{match.opposingTeam}</h2>
             </div>
           </div>
@@ -83,14 +83,14 @@ const Fetatured = () => {
         <div className={styles.matchContainer}>
           <div className={`${styles.box} ${styles.responsive}`} style={{height: "fit-content"}}>
             <div className={styles.team2}>
-              <img src="/logo.png" className={styles.virtusImg} alt="" style={{ height: '120px'}} />
+              <img src="/logo.png" className={styles.virtusImg} alt="virtus baronissi" style={{ height: '120px'}} />
               <h2>Virtus Baronissi</h2>
             </div>
             <div className={styles.vs} >
               <h1>VS</h1>
             </div>
             <div className={styles.team2}>
-              <img src={nextMatch?.opposingTeamImg} className={styles.guest} alt="" style={{ height: '120px'}} />
+              <img src={nextMatch?.opposingTeamImg} className={styles.guest} alt="logo squadra avversaria" style={{ height: '120px'}} />
               <h2>{nextMatch?.opposingTeam}</h2>
             </div>
           </div>

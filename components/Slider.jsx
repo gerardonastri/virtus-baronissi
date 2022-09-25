@@ -22,20 +22,20 @@ const Slider = () => {
                 <div className={styles.embla} ref={emblaRef}>
                     <div className={styles.embla__container}>
                         <div className={styles.embla__slide}>
-                            <img src="foto-staff-1.jpeg" alt="immagine del personale" />
-                            <img src="foto-staff-2.jpeg" alt="immagine del personale" />
-                            <img src="foto-staff-3.jpeg" alt="immagine del personale" />
-                            <img src="foto-staff-4.jpeg" alt="immagine del personale" />
+                            <img src="foto-staff-1.jpeg" alt="immagine del personale virtus baronissi" />
+                            <img src="foto-staff-2.jpeg" alt="immagine del personale virtus baronissi" />
+                            <img src="foto-staff-3.jpeg" alt="immagine del personale virtus baronissi" />
+                            <img src="foto-staff-4.jpeg" alt="immagine del personale virtus baronissi" />
                         </div>
                         <div className={styles.embla__slide}>
-                            <img src="foto-staff-6.jpeg" alt="immagine del personale" />
-                            <img src="foto-staff-7.jpeg" alt="immagine del personale" />
-                            <img src="foto-staff-8.jpeg" alt="immagine del personale" />
-                            <img src="foto-staff-9.jpeg" alt="immagine del personale" />
+                            <img src="foto-staff-6.jpeg" alt="immagine del personale virtus baronissi" />
+                            <img src="foto-staff-7.jpeg" alt="immagine del personale virtus baronissi" />
+                            <img src="foto-staff-8.jpeg" alt="immagine del personale virtus baronissi" />
+                            <img src="foto-staff-9.jpeg" alt="immagine del personale virtus baronissi" />
                         </div>
                         <div className={styles.embla__slide}>
-                            <img src="foto-staff-10.jpeg" alt="immagine del personale" />
-                            <img src="foto-staff-11.jpeg" alt="immagine del personale" />
+                            <img src="foto-staff-10.jpeg" alt="immagine del personale virtus baronissi" />
+                            <img src="foto-staff-11.jpeg" alt="immagine del personale virtus baronissi" />
                         </div>
                     </div>
                     <button className={styles.embla__prev} onClick={scrollPrev}>

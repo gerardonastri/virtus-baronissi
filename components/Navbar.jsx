@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <div className={styles.container}>
-        <img src="/logo.png" alt="logo virtus" />
+        <img src="/logo.png" alt="logo virtus baronissi" />
         <div className={styles.links}>
             <div className={isActive ? `${styles.menu} ${styles.active}` : styles.menu}>
                 <a href="/">Home</a>
