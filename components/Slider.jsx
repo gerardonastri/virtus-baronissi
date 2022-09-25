@@ -38,10 +38,10 @@ const Slider = () => {
                             <img src="foto-staff-11.jpeg" alt="immagine del personale virtus baronissi" />
                         </div>
                     </div>
-                    <button className={styles.embla__prev} onClick={scrollPrev}>
+                    <button name='scroll slider to left' className={styles.embla__prev} onClick={scrollPrev}>
                         <HiOutlineArrowLeft />
                     </button>
-                    <button className={styles.embla__next} onClick={scrollNext}>
+                    <button name='scroll slider to right' className={styles.embla__next} onClick={scrollNext}>
                         <HiOutlineArrowRight />
                     </button>
                 </div>

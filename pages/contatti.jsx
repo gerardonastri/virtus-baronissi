@@ -97,7 +97,7 @@ export default function Contatti() {
                     </div>
                     <input type="email" name="email"  placeholder='Email'  value={email} onChange={(e) => setEmail(e.target.value)} />
                     <textarea name="message"  id="" cols="30" rows="10" placeholder='Messaggio'  defaultValue={messaggio} onChange={(e) => setMessaggio(e.target.value)}></textarea>
-                    <button onClick={handleSubmit} style={{cursor: 'pointer'}}>Invia messaggio</button>
+                    <button name="invia il form" onClick={handleSubmit} style={{cursor: 'pointer'}}>Invia messaggio</button>
                 </form>
             </div>
         </div>
