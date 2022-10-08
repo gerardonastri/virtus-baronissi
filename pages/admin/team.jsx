@@ -67,7 +67,7 @@ const team = () => {
                             <tr>
                                 <th>name</th>
                                 <th>images</th>
-                                <th>roaster</th>
+                                <th>roster</th>
                                 <th>classifica</th>
                                 <th>calendario</th>
                                 <th>action</th>
