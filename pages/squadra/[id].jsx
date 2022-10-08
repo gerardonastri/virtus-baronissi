@@ -47,49 +47,6 @@ const Squadra = () => {
     const [id, setId] = useState(null);
     const [data, setData] = useState(null)
 
-    const roaster = [
-        { nome: 'Apicella Giuseppe', anno: 2022, numero: 3},
-        { nome: 'Apicella Giuseppe', anno: 2022, numero: 3},
-        { nome: 'Apicella Giuseppe', anno: 2022, numero: 3},
-        { nome: 'Apicella Giuseppe', anno: 2022, numero: 3},
-        { nome: 'Apicella Giuseppe', anno: 2022, numero: 3},
-        { nome: 'Apicella Giuseppe', anno: 2022, numero: 3},
-        { nome: 'Apicella Giuseppe', anno: 2022, numero: 3},
-        { nome: 'Apicella Giuseppe', anno: 2022, numero: 3},
-        { nome: 'Apicella Giuseppe', anno: 2022, numero: 3},
-        { nome: 'Apicella Giuseppe', anno: 2022, numero: 3},
-        { nome: 'Apicella Giuseppe', anno: 2022, numero: 3},
-        { nome: 'Apicella Giuseppe', anno: 2022, numero: 3},
-        { nome: 'Apicella Giuseppe', anno: 2022, numero: 3},
-        { nome: 'Apicella Giuseppe', anno: 2022, numero: 3},
-        { nome: 'Apicella Giuseppe', anno: 2022, numero: 3}
-    ]
-
-    const classifica = [
-        {id: 1, nome: 'basket club irpinia', punti: 30, partite: 18},
-        {id: 2, nome: 'basket club irpinia', punti: 30, partite: 18},
-        {id: 3, nome: 'basket club irpinia', punti: 30, partite: 18},
-        {id: 4, nome: 'basket club irpinia', punti: 30, partite: 18},
-        {id: 5, nome: 'basket club irpinia', punti: 30, partite: 18},
-        {id: 6, nome: 'basket club irpinia', punti: 30, partite: 18},
-        {id: 7, nome: 'basket club irpinia', punti: 30, partite: 18},
-        {id: 8, nome: 'basket club irpinia', punti: 30, partite: 18},
-        {id: 9, nome: 'basket club irpinia', punti: 30, partite: 18},
-        {id: 10, nome: 'basket club irpinia', punti: 30, partite: 18},
-        {id: 11, nome: 'basket club irpinia', punti: 30, partite: 18},
-        {id: 12, nome: 'basket club irpinia', punti: 30, partite: 18},
-    ]
-    const calendario = [
-        {casa: 'Virtus Baronissi', fuori: 'Tigers Saviano', data: 'Lun 29 Nov, 21 21:00', risultato: '85-42'},
-        {casa: 'Virtus Baronissi', fuori: 'Tigers Saviano', data: 'Lun 29 Nov, 21 21:00', risultato: '85-42'},
-        {casa: 'Virtus Baronissi', fuori: 'Tigers Saviano', data: 'Lun 29 Nov, 21 21:00', risultato: '85-42'},
-        {casa: 'Virtus Baronissi', fuori: 'Tigers Saviano', data: 'Lun 29 Nov, 21 21:00', risultato: '85-42'},
-        {casa: 'Virtus Baronissi', fuori: 'Tigers Saviano', data: 'Lun 29 Nov, 21 21:00', risultato: '85-42'},
-        {casa: 'Virtus Baronissi', fuori: 'Tigers Saviano', data: 'Lun 29 Nov, 21 21:00', risultato: '85-42'},
-        {casa: 'Virtus Baronissi', fuori: 'Tigers Saviano', data: 'Lun 29 Nov, 21 21:00', risultato: '85-42'},
-        {casa: 'Virtus Baronissi', fuori: 'Tigers Saviano', data: 'Lun 29 Nov, 21 21:00', risultato: '85-42'},
-
-    ]
     
     useEffect(() => {
         const getTeam = async () => {
@@ -121,7 +78,7 @@ const Squadra = () => {
         <h1 className={styles.teamName}>{id?.toUpperCase()}</h1>
         <div className={styles.wrapper}>
 
-            {/* <div className={styles.section}>
+            <div className={styles.section}>
                 <h2 style={styles.sectionTitle}>Roaster</h2>
                 <div className={styles.classifica}>
                      <TableContainer component={Paper} sx={{width: '100%'}}>
@@ -131,13 +88,13 @@ const Squadra = () => {
                                 <StyledTableCell className={styles.gray}>Nome</StyledTableCell>
                                 <StyledTableCell align="right" className={styles.gray} sx={{textAlign: 'center', padding: {xs: '3px 8px'}}}>Anno</StyledTableCell>
                                 <StyledTableCell align="right" className={styles.gray} sx={{textAlign: 'center', padding: {xs: '3px 8px'}}}>Numero</StyledTableCell>
-                                {id == 'under 19' && (
+                                {/* {id == 'under 19' && (
                                     <>
                                     <StyledTableCell align="right" className={styles.gray} sx={{textAlign: 'center', padding: {xs: '3px 8px'}}}>Punti</StyledTableCell>
                                     <StyledTableCell align="right" className={styles.gray} sx={{textAlign: 'center', padding: {xs: '3px 8px'}}}>Partite</StyledTableCell>
                                     <StyledTableCell align="right" className={styles.gray} sx={{textAlign: 'center',  padding: {xs: '3px 8px'}}}>Media</StyledTableCell>
                                     </>
-                                )}
+                                )} */}
                             </TableRow>
                             </TableHead>
                             <TableBody>
@@ -148,13 +105,13 @@ const Squadra = () => {
                                 </StyledTableCell>
                                 <StyledTableCell align="center" sx={{padding: {xs: '3px 8px'}}} >{row.anno}</StyledTableCell>
                                 <StyledTableCell align="center" sx={{padding: {xs: '3px 8px'}}} >{row.numero}</StyledTableCell>
-                                {id === 'under 19' && (
+                                {/* {id === 'under 19' && (
                                     <>
                                         <StyledTableCell align="center" sx={{color: "blue", padding: {xs: '3px 8px'}}} >188</StyledTableCell>
                                         <StyledTableCell align="center" sx={{color: "red", padding: {xs: '3px 8px'}}} >10</StyledTableCell>
                                         <StyledTableCell align="center" sx={{color: "green", padding: {xs: '3px 8px'}}} >18</StyledTableCell>
                                     </>
-                                )}
+                                )} */}
                                 </StyledTableRow>
                             ))}
                             </TableBody>
@@ -163,7 +120,7 @@ const Squadra = () => {
                     </div>
             </div>
 
-            <div className={styles.section}>
+            {/* <div className={styles.section}>
                 <h2 style={styles.sectionTitle}>Classifica</h2>
                 <div className={styles.classifica}>
                 
@@ -223,10 +180,12 @@ const Squadra = () => {
                         </TableContainer>
                     </div>
                 </div>
-            </div>*/}
+            </div> */}
 
         </div>
-        {/* <Pagination squadra={id && id} images={data && data.images} />  */}
+        {data?.images?.length > 0 && (
+            <Pagination squadra={id && id} images={data && data.images} />  
+        )}
         <Footer />
     </div>
   )

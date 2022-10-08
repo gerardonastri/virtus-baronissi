@@ -26,18 +26,20 @@ const Societa = () => {
             <p>CF: 95089310650  Dona il tuo 5x1000 </p>
 
             <h3 style={{marginBottom: '10px'}}>Corsi</h3>
-            <p>Lunedi - Mercoledi - Venerdi</p>
+            <p><b>Lunedi - Mercoledi - Venerdi</b></p>
             <ul>
-                <li>ore 16:00-17:00 Minibasket (2015-2013) <b>- solo lunedì</b></li>
-                <li>ore 17:00-18:00 Minibasket (2012-2011)</li>
+                <li>ore 16:00-17:00 Minibasket (2015-2013) - solo Lunedì</li>
+                <li>ore 17:00-18:00 Minibasket (2012-2011) - Lunedì, esordienti</li>
+                <li>ore 17:00-18:00 Minibasket (2012-2011) - Mercoledì e Venerdì, esordienti A</li>
                 <li>ore 18:00-19:15 Under 17 (2006-2007)</li>
                 <li>ore 19:15-20:15 Under 15 (2008-2010)</li>
-                <li>ore 20:15-21:30 Under 19 (2004-2005) <b>- solo Mercoledì e Venerdì</b></li>
+                <li>ore 20:15-21:30 Under 19 (2004-2005) - solo Mercoledì e Venerdì</li>
             </ul>
             <p>Martedi - Giovedi</p>
             <ul>
                 <li>ore 15:30-16:30 Minibasket (2018-2016)</li>
                 <li>ore 16:30-17:30 Minibasket (2015-2013)</li>
+                <li>ore 17:30-18:30 Esordienti B (2011-2012)</li>
             </ul>
             <p>Sabato</p>
             <ul>
