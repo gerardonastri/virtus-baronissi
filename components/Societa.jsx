@@ -35,13 +35,13 @@ const Societa = () => {
                 <li>ore 19:15-20:15 Under 15 (2008-2010)</li>
                 <li>ore 20:15-21:30 Under 19 (2004-2005) - solo Mercoledì e Venerdì</li>
             </ul>
-            <p>Martedi - Giovedi</p>
+            <p><b>Martedi - Giovedi</b></p>
             <ul>
                 <li>ore 15:30-16:30 Minibasket (2018-2016)</li>
                 <li>ore 16:30-17:30 Minibasket (2015-2013)</li>
                 <li>ore 17:30-18:30 Esordienti B (2011-2012)</li>
             </ul>
-            <p>Sabato</p>
+            <p><b>Sabato</b></p>
             <ul>
                 <li>ore 11:00-13:00 Under 19 (2004-2005)</li>
             </ul>
