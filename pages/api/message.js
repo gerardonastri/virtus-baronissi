@@ -1,6 +1,5 @@
 import dbConnect from "../../util/mongo";
 import Message from '../../models/Message'
-const nodemailer = require("nodemailer");
 
 
 const handler = async (req,res) => {
