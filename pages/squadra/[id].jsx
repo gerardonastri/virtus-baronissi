@@ -79,7 +79,7 @@ const Squadra = () => {
         <div className={styles.wrapper}>
 
             <div className={styles.section}>
-                <h2 style={styles.sectionTitle}>Roaster</h2>
+                <h2 style={styles.sectionTitle}>Roster</h2>
                 <div className={styles.classifica}>
                      <TableContainer component={Paper} sx={{width: '100%'}}>
                         <Table  aria-label="customized table">
