@@ -57,6 +57,13 @@
     border: 1px solid black;
 }
 
+.eccezione{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.575);
+}
+.squadra{
+    color: brown;
+}
 
 @media (min-width: 1300px) and (max-width: 1700px) {
     .imgContainer{
@@ -100,6 +107,8 @@
     }
     .societa h1{
         max-width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
     }
     .featuredImg{
         width: 100%;

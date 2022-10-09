@@ -28,22 +28,22 @@ const Societa = () => {
             <h3 style={{marginBottom: '10px'}}>Corsi</h3>
             <p><b>Lunedi - Mercoledi - Venerdi</b></p>
             <ul>
-                <li>ore 16:00-17:00 Minibasket (2015-2013) - solo Lunedì</li>
-                <li>ore 17:00-18:00 Minibasket (2012-2011) - Lunedì, esordienti</li>
-                <li>ore 17:00-18:00 Minibasket (2012-2011) - Mercoledì e Venerdì, esordienti A</li>
-                <li>ore 18:00-19:15 Under 17 (2006-2007)</li>
-                <li>ore 19:15-20:15 Under 15 (2008-2010)</li>
-                <li>ore 20:15-21:30 Under 19 (2004-2005) - solo Mercoledì e Venerdì</li>
+                <li>ore 16:00-17:00: <span className={styles.squadra}>Minibasket (2015-2013)</span> <span className={styles.eccezione}> solo Lunedì</span></li>
+                <li>ore 17:00-18:00: <span className={styles.squadra}>Esordienti B (2012-2011)</span> <span className={styles.eccezione}> Lunedì</span></li>
+                <li>ore 17:00-18:00: <span className={styles.squadra}>Esordienti A (2012-2011)</span> <span className={styles.eccezione}> Mercoledì e Venerdì</span></li>
+                <li>ore 18:00-19:15: <span className={styles.squadra}>Under 17 (2006-2007)</span></li>
+                <li>ore 19:15-20:15: <span className={styles.squadra}>Under 15 (2008-2010)</span></li>
+                <li>ore 20:15-21:30: <span className={styles.squadra}>Under 19 (2004-2005)</span> <span className={styles.eccezione}> solo Mercoledì e Venerdì</span></li>
             </ul>
             <p><b>Martedi - Giovedi</b></p>
             <ul>
-                <li>ore 15:30-16:30 Minibasket (2018-2016)</li>
-                <li>ore 16:30-17:30 Minibasket (2015-2013)</li>
-                <li>ore 17:30-18:30 Esordienti B (2011-2012)</li>
+                <li>ore 15:30-16:30 <span className={styles.squadra}>Minibasket (2018-2016)</span></li>
+                <li>ore 16:30-17:30 <span className={styles.squadra}>Minibasket (2015-2013)</span></li>
+                <li>ore 17:30-18:30 <span className={styles.squadra}>Minibasket (2012-2011)</span></li>
             </ul>
             <p><b>Sabato</b></p>
             <ul>
-                <li>ore 11:00-13:00 Under 19 (2004-2005)</li>
+                <li>ore 11:00-13:00 <span className={styles.squadra}>Under 19 (2004-2005)</span></li>
             </ul>
 
         </div>
