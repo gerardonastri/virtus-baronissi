@@ -29,7 +29,7 @@ const Societa = () => {
             <p><b>Lunedi - Mercoledi - Venerdi</b></p>
             <ul>
                 <li>ore 16:00-17:00: <span className={styles.squadra}>Minibasket (2015-2013)</span> <span className={styles.eccezione}> solo Lunedì</span></li>
-                <li>ore 17:00-18:00: <span className={styles.squadra}>Esordienti B (2012-2011)</span> <span className={styles.eccezione}> Lunedì</span></li>
+                <li>ore 17:00-18:00: <span className={styles.squadra}>Esordienti A e B (2012-2011)</span> <span className={styles.eccezione}> Lunedì</span></li>
                 <li>ore 17:00-18:00: <span className={styles.squadra}>Esordienti A (2012-2011)</span> <span className={styles.eccezione}> Mercoledì e Venerdì</span></li>
                 <li>ore 18:00-19:15: <span className={styles.squadra}>Under 17 (2006-2007)</span></li>
                 <li>ore 19:15-20:15: <span className={styles.squadra}>Under 15 (2008-2010)</span></li>
@@ -39,7 +39,7 @@ const Societa = () => {
             <ul>
                 <li>ore 15:30-16:30 <span className={styles.squadra}>Minibasket (2018-2016)</span></li>
                 <li>ore 16:30-17:30 <span className={styles.squadra}>Minibasket (2015-2013)</span></li>
-                <li>ore 17:30-18:30 <span className={styles.squadra}>Minibasket (2012-2011)</span></li>
+                <li>ore 17:30-18:30 <span className={styles.squadra}>Esordienti B (2012-2011)</span></li>
             </ul>
             <p><b>Sabato</b></p>
             <ul>
