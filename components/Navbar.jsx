@@ -28,7 +28,7 @@ const Navbar = () => {
                     <div className={(showDropDown) ? `${styles.dropdown} ${styles.show}` : styles.dropdown}>
                         <a href="/squadra/under19"><SportsBasketballIcon /> Under 19</a>
                         <a href="/squadra/under17"><SportsBasketballIcon /> Under 17</a>
-                        <a href="/squadra/under15"><SportsBasketballIcon /> Under 15</a>
+                        <a href="/squadra/under15"><SportsBasketballIcon /> Under 14-15</a>
                     </div>
                 </span>
                 <span style={{display: 'inline-flex', alignItems: 'center'}}>

@@ -149,9 +149,9 @@ const Squadra = () => {
                         </Table>
                     </TableContainer>
                 </div>
-            </div>
+            </div> */}
 
-            <div className={styles.section}>
+            {data?.calendario.length > 0 && ( <div className={styles.section}>
                 <h2 style={styles.sectionTitle}>Calendario</h2>
                 <div className={styles.calendario}>
                     <div className={styles.classifica}>
@@ -180,7 +180,7 @@ const Squadra = () => {
                         </TableContainer>
                     </div>
                 </div>
-            </div> */}
+            </div> )}
 
         </div>
         {data?.images?.length > 0 && (

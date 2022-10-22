@@ -13,7 +13,7 @@ const Societa = () => {
                 <li><b>Segretario:</b> De Chiara Valeria</li>
                 <li><b>Allenatore under 19:</b> Spisso Gerardo</li>
                 <li><b>Allenatore under 17:</b> Di Giuseppe Alessio</li>
-                <li><b>Allenatore under 15:</b> Abundo Carlo</li>
+                <li><b>Allenatore under 14-15:</b> Abundo Carlo</li>
                 <li><b>Istruttori minibasket:</b> Rizzo Michele - Spisso Gerardo - Senatore Attilio - Antonio Iannone</li>
             </ul>
             <h3 style={{marginBottom: '10px'}}>Sede</h3>
