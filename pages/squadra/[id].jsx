@@ -67,6 +67,8 @@ const Squadra = () => {
         getData()
     }, [])
 
+    console.log(id);
+
   return (
     <div className={styles.container}>
         <Head>
@@ -75,7 +77,11 @@ const Squadra = () => {
             <link rel="icon" href="http://www.virtusbaronissi.altervista.org/varie/LOGO.jpg" />
         </Head>
         <Navbar />
-        <h1 className={styles.teamName}>{id?.toUpperCase()}</h1>
+        <h1 className={styles.teamName}>{id && id === "under 15"  ? (
+            <>UNDER 14-15</>
+        ) : (
+            <>{id?.toUpperCase()}</>
+        )}</h1>
         <div className={styles.wrapper}>
 
             <div className={styles.section}>
