@@ -77,7 +77,7 @@ const news = () => {
                             {data?.map(news => (
                                     <tr>
                                         <td>{news.title}</td>
-                                        <td>{news.desc}</td>
+                                        <td>{news.desc.split(0,80)}</td>
                                         <td>{news.coverImg}</td>
                                         <td className={styles.password}></td>
                                         <td>{news.body.slice(0,50)}</td>

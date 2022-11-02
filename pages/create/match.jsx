@@ -21,20 +21,30 @@ const createMatch = () => {
 
 
     const createMatches = async () => {
-            try {
-              const res = await axiosReq.post('match', {
-                opposingTeam,
-                opposingTeamImg,
-                virtusScore,
-                opposingTeamScore,
-                category,
-                type
-              })
-              router.push('/admin/match')
-            } catch (error) {
-              console.log(error);
-            }
-      }
+      try {
+        if(opposingTeamImg){
+          const res = await axiosReq.post('match', {
+            opposingTeam,
+            opposingTeamImg,
+            virtusScore,
+            opposingTeamScore,
+            category,
+            type
+          })
+        } else {
+          const res = await axiosReq.post('match', {
+            opposingTeam,
+            virtusScore,
+            opposingTeamScore,
+            category,
+            type
+          })
+        }
+      router.push('/admin/match')
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <div className={styles.container}>
