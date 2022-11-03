@@ -19,6 +19,12 @@ const MatchSchema = new mongoose.Schema({
     },
     type: {
         type: String
+    },
+    data: {
+        type: String
+    }, 
+    luogo: {
+        type: String
     }
 
 }, {timestamps: true})

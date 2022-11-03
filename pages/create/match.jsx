@@ -16,6 +16,8 @@ const createMatch = () => {
     const [opposingTeamScore, setOpposingTeamScore] = useState(0);
     const [category, setCategory] = useState("");
     const [type, setType] = useState("");
+    const [data, setData] = useState("");
+    const [luogo, setLuogo] = useState("");
     
     const router = useRouter()
 
@@ -29,7 +31,9 @@ const createMatch = () => {
             virtusScore,
             opposingTeamScore,
             category,
-            type
+            type,
+            data,
+            luogo
           })
         } else {
           const res = await axiosReq.post('match', {
@@ -37,7 +41,9 @@ const createMatch = () => {
             virtusScore,
             opposingTeamScore,
             category,
-            type
+            type,
+            data,
+            luogo
           })
         }
       router.push('/admin/match')
@@ -85,6 +91,16 @@ const createMatch = () => {
             <div className={styles.formGroup}>
               <label htmlFor="type">Tipo(prossimo o ultimo)</label>
               <input name="type" id="type" type="text" value={type} onChange={(e) => setType(e.target.value)} />
+            </div>
+
+            <div className={styles.formGroup}>
+              <label htmlFor="data">Data</label>
+              <input name="data" id="data" type="text" value={data} onChange={(e) => setData(e.target.value)} />
+            </div>
+            
+            <div className={styles.formGroup}>
+              <label htmlFor="luogo">Luogo</label>
+              <input name="luogo" id="luogo" type="text" value={luogo} onChange={(e) => setLuogo(e.target.value)} />
             </div>
             <button onClick={createMatches}>Submit</button>
 

@@ -106,6 +106,16 @@
 .matchContainer .box{
     flex: 1;
     max-width: 700px;
+    padding-top: 50px;
+    position: relative;
+}
+.matchContainer .box h3{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    color: #1C2B4B;
 }
 
 @media (min-width: 700px) and (max-width: 1550px) {

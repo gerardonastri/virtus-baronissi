@@ -14,6 +14,7 @@ const Fetatured = () => {
           const res = await axiosReq.get('match?sort=yes')
           setLastMatch(res.data.lastMatch)
           setNextMatches(res.data.nextMatches)
+          console.log(res.data.nextMatches)
           setNextMatch(res.data.lastMatchMinibasket)
         } catch (error) {
             console.log(error);
@@ -58,6 +59,7 @@ const Fetatured = () => {
         <div className={styles.matchContainer}>
           {nextMatches?.map(match => (
           <div className={`${styles.box} ${styles.responsive}`} style={{height: "fit-content"}}>
+              <h3>{match.data} - {match.luogo}</h3>
             <div className={styles.team2}>
               <img src="/logo.png" className={styles.virtusImg} alt="virtus baronissi" style={{ height: '120px'}} />
               <h2>Virtus Baronissi</h2>
@@ -82,6 +84,7 @@ const Fetatured = () => {
         </div>
         <div className={styles.matchContainer}>
           <div className={`${styles.box} ${styles.responsive}`} style={{height: "fit-content"}}>
+            <h3>{nextMatch?.data} - {nextMatch?.luogo}</h3>
             <div className={styles.team2}>
               <img src="/logo.png" className={styles.virtusImg} alt="virtus baronissi" style={{ height: '120px'}} />
               <h2>Virtus Baronissi</h2>
