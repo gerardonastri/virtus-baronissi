@@ -167,7 +167,8 @@ const Squadra = () => {
                                 <TableHead>
                                     <TableRow>
                                         <StyledTableCell className={styles.red} >Partita</StyledTableCell>
-                                        <StyledTableCell className={styles.red} align="center">Data</StyledTableCell>
+                                        <StyledTableCell className={styles.red} align="center">Andata</StyledTableCell>
+                                        <StyledTableCell className={styles.red} align="center">Ritorno</StyledTableCell>
                                         <StyledTableCell className={styles.red} align="center">Risultato</StyledTableCell>
                                     </TableRow>
                                 </TableHead>
@@ -178,6 +179,7 @@ const Squadra = () => {
                                         {row.partita}
                                     </StyledTableCell>
                                     <StyledTableCell align="center" sx={{color: 'gray', fontWeight: '100', padding: {xs: '8px 10px'}}} >{row.data}</StyledTableCell>
+                                    <StyledTableCell align="center" sx={{color: 'gray', fontWeight: '100', padding: {xs: '8px 10px'}}} >{row.ritorno}</StyledTableCell>
                                     <StyledTableCell align="center" sx={{color: 'gray', padding: {xs: '8px 10px'}}} >{row.risultato}</StyledTableCell>
                                     </StyledTableRow>
                                 ))}

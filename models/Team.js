@@ -33,6 +33,7 @@ const TeamSchema = new mongoose.Schema({
             {
                 partita: String,
                 data: String,
+                ritorno: String,
                 risultato: String
             }   
         ]

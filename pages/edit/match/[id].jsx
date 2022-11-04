@@ -8,11 +8,12 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import SettingsIcon from '@mui/icons-material/Settings';
 import Sidebar from '../../components/Sidebar';
-import storage from '../../util/firebase';
 
-const createMatch = () => {
+const editMatch = () => {
+    const [match, setMatch] = useState(null);
     const [opposingTeam, setOpposingTeam] = useState(null);
-    const [opposingTeamImg, setOpposingTeamImg] = useState("");
+    const [opposingTeamImg, setOpposingTeamImg] = useState(null);
+    const [newOpposingTeamImg, setNewOpposingTeamImg] = useState(null);
     const [virtusScore, setVirtusScore] = useState(0);
     const [opposingTeamScore, setOpposingTeamScore] = useState(0);
     const [category, setCategory] = useState("");
@@ -22,10 +23,24 @@ const createMatch = () => {
     
     const router = useRouter()
 
+    useEffect(() => {
+        const getData = async () => {
+            const id = location.pathname.split('/')[3];
+            const res = await axiosReq.get(`match?id=${id}`)
+            setId(res.data._id)
+            setTitle(res.data.title)
+            setDesc(res.data.desc)
+            setCoverImg(res.data.coverImg)
+            setBody(res.data.body)
+            setImages(res.data.images)
+        }
+        getData
+    },[])
+
 
     const createMatches = async () => {
       try {
-        if(opposingTeamImg){
+        if(newOpposingTeamImg){
           const fileData = await storage.ref(`matches/${opposingTeamImg.name}`).put(opposingTeamImg)
           const imageSrc = await fileData.ref.getDownloadURL()
           const res = await axiosReq.post('match', {
@@ -77,7 +92,7 @@ const createMatch = () => {
             </div>
             <div className={styles.formGroup}>
               <label htmlFor="opposingTeamImg">Immagine squadra avversaria</label>
-              <input type="file" name="opposingTeamImg" id="opposingTeamImg"  onChange={(e) => setOpposingTeamImg(e.target.files[0])} />
+              <input type="file" name="opposingTeamImg" id="opposingTeamImg" value={newOpposingTeamImg} onChange={(e) => setNewOpposingTeamImg(e.target.files[0])} />
             </div>
             <div className={styles.formGroup}>
               <label htmlFor="virtusScore">Punteggio Virtus</label>
@@ -114,4 +129,4 @@ const createMatch = () => {
   )
 }
 
-export default createMatch
+export default editMatch

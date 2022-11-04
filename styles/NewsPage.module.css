@@ -11,6 +11,9 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
 }
+.wrapper > h1{
+    color: #1C2B4B;
+}
 
 .card {
     flex: 1;
