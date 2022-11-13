@@ -51,7 +51,7 @@ const Fetatured = () => {
         </div>
       </div> */}
 
-      <div className={styles.nextContainer}>
+     <div className={styles.nextContainer}>
         <div className={styles.next}>
           <span>Schedule</span>
           <h1>PROSSIMI INCONTRI</h1>
@@ -77,7 +77,7 @@ const Fetatured = () => {
         </div>
       </div>
 
-      <div className={styles.nextMinibasket}>
+      {nextMatch && (<div className={styles.nextMinibasket}>
         <div className={styles.next}>
           <span>Minibasket</span>
           <h1>PROSSIMI INCONTRI</h1>
@@ -98,7 +98,7 @@ const Fetatured = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div>)}
 
     </div>
   )

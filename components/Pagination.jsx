@@ -34,7 +34,9 @@ const Pagination = ({images}) => {
     <div className={styles.container}>
         <div className={styles.wrapper}>
             {currentImages?.map(img => (
-                <img src={img} alt="immagine della squadra" />
+                <a href={`${img}`} target="_blank">
+                    <img src={img} alt="immagine della squadra" />
+                </a>
             ))}
         </div>
         <Pages onChange={(e) => handleChange(e.target.textContent)} sx={{display: 'flex', justifyContent: 'flex-end', marginTop: '10px'}} count={Math.ceil(images?.length / imagesPerPage)} />
