@@ -1,9 +1,10 @@
 .container{
-    height: 85px;
+    height: 130px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 0 100px;
+    padding-top: 10px;
     /*background-color: #1C2B4B;*/
     /*background-color: #435dc9;*/
     /*background-color: #888787;*/
@@ -69,10 +70,13 @@
 .show{
     display: flex !important;
 }
+.container > a {
+    height: 100%;
+}
 
 .container img{
-    width: 160px;
-    height: 92%;
+    height: 120px;
+    width: 180px;
 }
 
 .hamburger{
@@ -175,7 +179,7 @@
         font-size: 14px;
         margin-bottom: 10px;
     }
-    .container > img{
+    .container > a > img{
         width: 150px !important;
     }
 }
@@ -188,7 +192,7 @@
     .hamburger{
         margin-right: 20px;
     }
-    .container > img{
+    .container > a > img{
         width: 150px !important;
     }
 }
