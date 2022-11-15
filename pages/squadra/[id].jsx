@@ -66,9 +66,6 @@ const Squadra = () => {
         getTeam()
         getData()
     }, [])
-
-    console.log(id);
-
   return (
     <div className={styles.container}>
         <Head>
@@ -187,6 +184,16 @@ const Squadra = () => {
                             </Table>
                         </TableContainer>
                     </div>
+                   {id && id === 'under 19' && (
+                    <div className={styles.downloadCalendar}>
+                        <a href="/CALENDARIO_under19.doc" download={true} >Scarica il calendario</a>
+                   </div>
+                   )}
+                   {id && id === 'under 17' && (
+                    <div className={styles.downloadCalendar}>
+                        <a href="/CALENDARIO_under17.doc" download={true} >Scarica il calendario</a>
+                   </div>
+                   )}
                 </div>
             </div> )}
 

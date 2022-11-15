@@ -2,7 +2,7 @@
 
 
 .teamName{
-    margin-top: 100px;
+    margin-top: 150px;
     text-align: center;
 }
 .wrapper{
@@ -51,6 +51,15 @@
 }
 .red{
     background-color: #D12023 !important;
+}
+
+.downloadCalendar{
+    text-align: center;
+    margin-top: 10px;
+    color: #1C2B4B;
+    text-decoration: underline;
+    width: 100%;
+    font-size: 12px;
 }
 
 @media (min-width: 450px) and (max-width: 700px) {
