@@ -165,7 +165,8 @@
         margin-bottom: 10px;
     }
     .matchContainer .box{
-        padding: 10px 0;
+        padding: 40px 0;
+        padding-top: 60px;
     }
     .team{
         text-align: center;
