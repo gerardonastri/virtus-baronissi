@@ -6,6 +6,7 @@
 /.pnp
 .pnp.js
 /util.txt
+./pages/edit/match/[id].jsx
 
 # testing
 /coverage
