@@ -53,7 +53,7 @@ const Fetatured = () => {
 
      <div className={styles.nextContainer}>
         <div className={styles.next}>
-          <span>Schedule</span>
+          <span></span>
           <h1>PROSSIMI INCONTRI</h1>
         </div>
         <div className={styles.matchContainer}>
