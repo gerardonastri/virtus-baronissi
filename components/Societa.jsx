@@ -14,7 +14,7 @@ const Societa = () => {
                 <li><b>Allenatore under 19:</b> Spisso Gerardo</li>
                 <li><b>Allenatore under 17:</b> Di Giuseppe Alessio - Raffeale Aliberti</li>
                 <li><b>Allenatore under 14-15:</b> Abundo Carlo - Raffeale Aliberti</li>
-                <li><b>Istruttori minibasket:</b> Rizzo Michele - Spisso Gerardo - Senatore Attilio - Antonio Iannone - Davide Farina</li>
+                <li><b>Istruttori minibasket:</b> Rizzo Michele - Spisso Gerardo - Senatore Attilio - Iannone Antonio - Farina Davide - Apicella Giuseppe - Sforza Roberta - Napoli Daniele</li>
             </ul>
             <h3 style={{marginBottom: '10px'}}>Sede</h3>
             <p>VIA MARCONI, 13 C/O DE CHIARA Agostino 84081 BARONISSI (SA)</p>
