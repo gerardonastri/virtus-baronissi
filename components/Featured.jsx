@@ -24,15 +24,7 @@ const Fetatured = () => {
   }, [])
 
 
-  const data = {
-    punteggio1: 82,
-    punteggio2: 67,
-    squadraAvversaria: 'guest'
-  }
-
-  const next = {
-    squadraAvversaria: 'guest'
-  }
+  console.log(nextMatches);
 
   return (
     <div className={styles.container}>
@@ -56,6 +48,7 @@ const Fetatured = () => {
           <span></span>
           <h1>PROSSIMI INCONTRI</h1>
         </div>
+
         <div className={styles.matchContainer}>
           {nextMatches?.map(match => (
           <div className={`${styles.box} ${styles.responsive}`} style={{height: "fit-content"}}>
@@ -71,10 +64,13 @@ const Fetatured = () => {
               <img src={match.opposingTeamImg} className={styles.guest} alt="logo squadra avversaria" style={{ height: '120px'}} />
               <h2>{match.opposingTeam}</h2>
             </div>
+            <div className={styles.category}>
+              <span>{match.category}</span>
+            </div>
           </div>
           ))}
-
         </div>
+
       </div>
 
       {nextMatch && (<div className={styles.nextMinibasket}>
