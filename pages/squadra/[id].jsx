@@ -194,6 +194,12 @@ const Squadra = () => {
                         <a href="/CALENDARIO_under17.doc" download={true} >Scarica il calendario</a>
                    </div>
                    )}
+                   {id && id === 'under 15' && (
+                    <div className={styles.downloadCalendar}>
+                        <a href="/CALENDARIO_under15.doc" download={true} style={{display: "block", marginBottom: "5px"}}>Scarica il calendario U15</a>
+                        <a href="/CALENDARIO_under14.doc" download={true}>Scarica il calendario U14</a>
+                   </div>
+                   )}
                 </div>
             </div> )}
 
