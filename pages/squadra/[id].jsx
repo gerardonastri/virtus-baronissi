@@ -66,6 +66,8 @@ const Squadra = () => {
         getTeam()
         getData()
     }, [])
+
+    
   return (
     <div className={styles.container}>
         <Head>
@@ -123,7 +125,8 @@ const Squadra = () => {
                     </div>
             </div>
 
-            {/* <div className={styles.section}>
+            {(id === "under 19" || id === "under 17") && (
+            <div className={styles.section}>
                 <h2 style={styles.sectionTitle}>Classifica</h2>
                 <div className={styles.classifica}>
                 
@@ -152,7 +155,7 @@ const Squadra = () => {
                         </Table>
                     </TableContainer>
                 </div>
-            </div> */}
+            </div>)}
 
             {data?.calendario.length > 0 && ( <div className={styles.section}>
                 <h2 style={styles.sectionTitle}>Calendario</h2>
