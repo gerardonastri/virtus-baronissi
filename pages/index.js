@@ -34,7 +34,7 @@ export default function Home() {
       {/* <div className={styles.featuredImg}>
         <img src='/featured-img.jpeg' alt='featured img' />
       </div> */}
-      {/* <Fetatured /> */}
+      <Fetatured />
       <Societa />
       <News />
       <Footer />

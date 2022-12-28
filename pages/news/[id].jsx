@@ -41,32 +41,38 @@ const Squadra = () => {
         </Head>
         <Navbar />
         <div className={styles.wrapper}>
-        <div className={styles.flex}>
-            <div>
-                <h1>{data?.title}</h1>
-                <p>{data?.desc}</p>
-                <img src={data?.coverImg} alt="" />
+            <div className={styles.flex}>
+                <div>
+                    <h1>{data?.title}</h1>
+                    <p>{data?.desc}</p>
+                    <img className={styles.coverImg} src={data?.coverImg} alt="" />
+                </div>
+                {/* <div className={styles.otherNews}>
+                    {news?.length > 0 &&  (
+                        <>
+                        <h2>Altre News</h2>
+                        <hr />
+                        {news?.map(news => (
+                            <a href={`/news/${news._id}`} className={styles.sigleNew}>
+                                <h3>{news.title}</h3>
+                                {/* <span className={styles.time}>
+                                <AccessTimeIcon />
+                                Jun 16, 2022
+                            </a>
+                        ))}
+                        </>
+                    )}
+                </div> */}
             </div>
-            <div className={styles.otherNews}>
-                {news?.length > 0 &&  (
-                    <>
-                    <h2>Altre News</h2>
-                    <hr />
-                    {news?.map(news => (
-                        <a href={`/news/${news._id}`} className={styles.sigleNew}>
-                            <h3>{news.title}</h3>
-                            <span className={styles.time}>
-                            <AccessTimeIcon />
-                            Jun 16, 2022
-                            </span>
-                        </a>
-                    ))}
-                    </>
-                )}
-            </div>
-        </div>
             <div className={styles.body}>
                 {data?.body}
+            </div>
+            <div className={styles.images}>
+                {data?.images?.map(img => (
+                    <a href={img} target="_blank">
+                        <img src={img} alt="" />
+                    </a>
+                ))}
             </div>
         </div>
         <Footer />

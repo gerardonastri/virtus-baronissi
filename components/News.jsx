@@ -31,10 +31,10 @@ const News = () => {
                     <div className={styles.card}>
                         <img src={news.coverImg} alt="immagine della news" />
                         <h3 className={styles.title}>{news.title}</h3>
-                        <span className={styles.time}>
+                        {/* <span className={styles.time}>
                             <AccessTimeIcon />
                             Jun 16, 2022
-                        </span>
+                        </span> */}
                         <p className={styles.desc}>{news.desc.slice(0,80)}...</p>
                         <a href={`/news/${news._id}`} className={styles.more}>Leggi di più <ArrowForwardIcon /> </a>
                     </div>
