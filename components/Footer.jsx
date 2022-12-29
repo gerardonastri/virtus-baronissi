@@ -38,7 +38,7 @@ const Footer = () => {
                         <a href="/squadra/under19">Under 17</a>
                         <a href="/squadra/under19">Under 14-15</a>
                         <a href="/squadra/esordienti">Esordienti</a>
-                        <a href="/squadra/minibasket">Minibasket</a>
+                        <a href="/squadra/aquilotti">Aquilotti</a>
                 </div>
                 <div className={styles.section}>
                     <h2>INFO CONTATTI</h2>

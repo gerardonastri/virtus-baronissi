@@ -36,7 +36,7 @@ const Navbar = () => {
                 <span style={{display: 'inline-flex', alignItems: 'center'}}>
                     Minibasket {showDropDown3 ? <ArrowDropUpIcon onClick={() => setShowDropDown3(prev => !prev)} /> : <ArrowDropDownIcon onClick={() => {setShowDropDown3(prev => !prev); setShowDropDown(false); setShowDropDown2(false)}} />}
                     <div className={(showDropDown3) ? `${styles.dropdown} ${styles.show}` : styles.dropdown}>
-                        <a href="/squadra/minibasket"><SportsBasketballIcon /> Minibasket</a>
+                        <a href="/squadra/aquilotti"><SportsBasketballIcon /> Aquilotti</a>
                         <a href="/squadra/esordienti"><SportsBasketballIcon /> Esordienti</a>
                     </div>
                 </span>

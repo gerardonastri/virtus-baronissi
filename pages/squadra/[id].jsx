@@ -83,6 +83,7 @@ const Squadra = () => {
         )}</h1>
         <div className={styles.wrapper}>
 
+            {data?.roaster?.length > 0 && (
             <div className={styles.section}>
                 <h2 style={styles.sectionTitle}>Roster</h2>
                 <div className={styles.classifica}>
@@ -122,8 +123,8 @@ const Squadra = () => {
                             </TableBody>
                         </Table>
                     </TableContainer>
-                    </div>
-            </div>
+                </div> 
+            </div>)}
 
             {(id === "under 19" || id === "under 17") && (
             <div className={styles.section}>
@@ -168,6 +169,7 @@ const Squadra = () => {
                                     <TableRow>
                                         <StyledTableCell className={styles.red} >Partita</StyledTableCell>
                                         <StyledTableCell className={styles.red} align="center">Andata</StyledTableCell>
+                                        <StyledTableCell className={styles.red} align="center">Risultato</StyledTableCell>
                                         <StyledTableCell className={styles.red} align="center">Ritorno</StyledTableCell>
                                         <StyledTableCell className={styles.red} align="center">Risultato</StyledTableCell>
                                     </TableRow>
@@ -179,8 +181,9 @@ const Squadra = () => {
                                         {row.partita}
                                     </StyledTableCell>
                                     <StyledTableCell align="center" sx={{color: 'gray', fontWeight: '100', padding: {xs: '8px 10px'}}} >{row.data}</StyledTableCell>
-                                    <StyledTableCell align="center" sx={{color: 'gray', fontWeight: '100', padding: {xs: '8px 10px'}}} >{row.ritorno}</StyledTableCell>
                                     <StyledTableCell align="center" sx={{color: 'gray', padding: {xs: '8px 10px'}}} >{row.risultato}</StyledTableCell>
+                                    <StyledTableCell align="center" sx={{color: 'gray', fontWeight: '100', padding: {xs: '8px 10px'}}} >{row.ritorno}</StyledTableCell>
+                                    <StyledTableCell align="center" sx={{color: 'gray', padding: {xs: '8px 10px'}}} ></StyledTableCell>
                                     </StyledTableRow>
                                 ))}
                                 </TableBody>
