@@ -34,11 +34,11 @@ const Footer = () => {
                 </div>
                 <div className={styles.section}>
                     <h2>Altre pagine</h2>
-                        <a href="/under19">Under 19</a>
-                        <a href="/under17">Under 17</a>
-                        <a href="/under15">Under 14-15</a>
-                        <a href="/esordienti">Esordienti</a>
-                        <a href="/minibasket">Minibasket</a>
+                        <a href="/squadra/under19">Under 19</a>
+                        <a href="/squadra/under19">Under 17</a>
+                        <a href="/squadra/under19">Under 14-15</a>
+                        <a href="/squadra/esordienti">Esordienti</a>
+                        <a href="/squadra/minibasket">Minibasket</a>
                 </div>
                 <div className={styles.section}>
                     <h2>INFO CONTATTI</h2>
