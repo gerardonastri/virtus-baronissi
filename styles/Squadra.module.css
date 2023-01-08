@@ -71,6 +71,7 @@
     .wrapper{
         flex-direction: column;
     }
+
 }
 @media (max-width: 450px) {
     .container > h1{
@@ -81,5 +82,8 @@
     }
     .classifica:nth-child(1) div table tbody tr td{
         padding: 5px !important;
+    }
+    .notShow{
+        display: none;
     }
 }
