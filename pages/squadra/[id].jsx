@@ -180,7 +180,7 @@ const Squadra = () => {
                                     <StyledTableCell component="th" scope="row" sx={{fontWeight: '600', color: "rgb(70 56 56)", padding: {xs: '10px'}}}>
                                         {row.partita}
                                     </StyledTableCell>
-                                    <StyledTableCell align="center" sx={{color: 'gray', fontWeight: '100', padding: {xs: '8px 10px'}}} className={`${styles.notShow}`}>{row.data}</StyledTableCell>
+                                    <StyledTableCell align="center" sx={{color: 'gray', fontWeight: '100', padding: {xs: '8px 10px', backgroundColor: ""}}} className={`${styles.red} ${styles.andata}`}>{row.data}</StyledTableCell>
                                     <StyledTableCell align="center" sx={{color: 'gray', padding: {xs: '8px 10px'}}}  >{row.risultato}</StyledTableCell>
                                     <StyledTableCell align="center" sx={{color: 'gray', fontWeight: '100', padding: {xs: '8px 10px'}}} >{row.ritorno}</StyledTableCell>
                                     <StyledTableCell align="center" sx={{color: 'gray', padding: {xs: '8px 10px'}}} ></StyledTableCell>

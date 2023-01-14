@@ -61,7 +61,9 @@
     width: 100%;
     font-size: 12px;
 }
-
+.classifica .andata{
+    background-color: transparent !important;
+}
 
 
 
