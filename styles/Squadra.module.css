@@ -51,7 +51,6 @@
 }
 .red{
     background-color: #D12023 !important;
-    display: none;
 }
 
 .downloadCalendar{
@@ -80,7 +79,9 @@
 }
 @media (max-width: 450px) {
     
-    
+    .red:nth-child(2){
+        display: none !important;
+    }
     .container > h1{
         margin-top: 120px;
     }
