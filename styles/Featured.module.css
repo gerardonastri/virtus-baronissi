@@ -218,5 +218,9 @@
     .nextMinibasket .box{
         margin-left: 0;
     }
+    .matchContainer .box h3{
+        width: 100%;
+        text-align: center;
+    }
     
 }

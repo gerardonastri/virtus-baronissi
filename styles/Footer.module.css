@@ -89,4 +89,9 @@
     .wrapper hr{
         margin-right: 30px;
     }
+    .down{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
 }
