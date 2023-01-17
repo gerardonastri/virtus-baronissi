@@ -38,6 +38,7 @@ const Navbar = () => {
                     <div className={(showDropDown3) ? `${styles.dropdown} ${styles.show}` : styles.dropdown}>
                         <a href="/squadra/aquilotti"><SportsBasketballIcon /> Aquilotti</a>
                         <a href="/squadra/esordienti"><SportsBasketballIcon /> Esordienti</a>
+                        <a href="/squadra/scoiattoli"><SportsBasketballIcon /> Scoiattoli</a>
                     </div>
                 </span>
                 {/* <span  style={{display: 'inline-flex', alignItems: 'center'}}>
