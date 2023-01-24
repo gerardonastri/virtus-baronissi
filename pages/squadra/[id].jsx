@@ -181,9 +181,9 @@ const Squadra = () => {
                                         {row.partita}
                                     </StyledTableCell>
                                     <StyledTableCell align="center" sx={{color: 'gray', fontWeight: '100', padding: {xs: '8px 10px', backgroundColor: ""}}} className={`${styles.red} ${styles.andata}`}>{row.data}</StyledTableCell>
-                                    <StyledTableCell align="center" sx={{color: 'gray', padding: {xs: '8px 10px'}}}  >{row.risultato}</StyledTableCell>
+                                    <StyledTableCell align="center" sx={{color: 'gray', padding: {xs: '8px 10px'}}}  >{row.risultato.split(",")[0]}</StyledTableCell>
                                     <StyledTableCell align="center" sx={{color: 'gray', fontWeight: '100', padding: {xs: '8px 10px'}}} >{row.ritorno}</StyledTableCell>
-                                    <StyledTableCell align="center" sx={{color: 'gray', padding: {xs: '8px 10px'}}} ></StyledTableCell>
+                                    <StyledTableCell align="center" sx={{color: 'gray', padding: {xs: '8px 10px'}}} >{row.risultato.split(",")[1]}</StyledTableCell>
                                     </StyledTableRow>
                                 ))}
                                 </TableBody>
