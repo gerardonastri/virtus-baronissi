@@ -30,7 +30,7 @@ const Footer = () => {
                         <a href="/news">News</a>
                         <a href="/corsi">Corsi</a>
                         <a href="/MODELLO DI ISCRIZIONE VIRTUS_2 GIORNI.pdf" download={true}>Modulo iscrizione 3 giorni</a>
-                        <a href="/MODELLO DI ISCRIZIONE VIRTUS.pdf" download={true}>Modulo iscrizione 2 giorni</a>
+                        <a href="/MODELLO DI ISCRIZIONE VIRTUS.pdf" download={true}>Laboratorio Basket</a>
                 </div>
                 <div className={styles.section}>
                     <h2>Altre pagine</h2>
