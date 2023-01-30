@@ -144,7 +144,7 @@ const Squadra = () => {
                             <TableBody>
                             {data?.classifica.map((row) => (
                                 <StyledTableRow key={row.posizione}>
-                                <StyledTableCell component="th" scope="row" sx={{color: 'blue', padding: {xs: '8px 10px'}}}>
+                                <StyledTableCell component="th" scope="row" sx={{ padding: {xs: '8px 10px'}}}>
                                     {row.posizione}
                                 </StyledTableCell>
                                 <StyledTableCell align="center"  sx={{fontWeight: '600', color: "rgb(70 56 56)", padding: {xs: '8px 10px'}}} >{row.nome}</StyledTableCell>
@@ -204,6 +204,16 @@ const Squadra = () => {
                     <div className={styles.downloadCalendar}>
                         <a href="/CALENDARIO_under15.doc" download={true} style={{display: "block", marginBottom: "5px"}}>Scarica il calendario U15</a>
                         <a href="/CALENDARIO_under14.doc" download={true}>Scarica il calendario U14</a>
+                   </div>
+                   )}
+                   {id && id === 'esordienti' && (
+                    <div className={styles.downloadCalendar}>
+                        <a href="/CALENDARIO_Esordienti.doc" download={true} style={{display: "block", marginBottom: "5px"}}>Scarica il calendario degli esordienti</a>
+                   </div>
+                   )}
+                   {id && id === 'aquilotti' && (
+                    <div className={styles.downloadCalendar}>
+                        <a href="/CALENDARIO_Aquilotti_2012.doc" download={true} style={{display: "block", marginBottom: "5px"}}>Scarica il calendario degli aquilotti</a>
                    </div>
                    )}
                 </div>
