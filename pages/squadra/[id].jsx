@@ -170,7 +170,7 @@ const Squadra = () => {
                                         <StyledTableCell className={styles.red} >Partita</StyledTableCell>
                                         <StyledTableCell className={`${styles.red} ${styles.notShow}`} align="center">Andata</StyledTableCell>
                                         <StyledTableCell className={`${styles.red} `} align="center">Risultato</StyledTableCell>
-                                        {id !== "esordienti" && id !== "aquilotti" && (
+                                        {id !== "esordienti" && (
                                             <>
                                             <StyledTableCell className={styles.red} align="center">Ritorno</StyledTableCell>
                                             <StyledTableCell className={styles.red} align="center">Risultato</StyledTableCell>
@@ -186,7 +186,7 @@ const Squadra = () => {
                                     </StyledTableCell>
                                     <StyledTableCell align="center" sx={{color: 'gray', fontWeight: '100', padding: {xs: '8px 10px', backgroundColor: ""}}} className={`${styles.red} ${styles.andata}`}>{row.data}</StyledTableCell>
                                     <StyledTableCell align="center" sx={{color: 'gray', padding: {xs: '8px 10px'}}}  >{row.risultato.split(",")[0]}</StyledTableCell>
-                                    {id !== "esordienti" && id !== "aquilotti" && (
+                                    {id !== "esordienti" && (
                                         <>
                                         <StyledTableCell align="center" sx={{color: 'gray', fontWeight: '100', padding: {xs: '8px 10px'}}} >{row.ritorno}</StyledTableCell>
                                         <StyledTableCell align="center" sx={{color: 'gray', padding: {xs: '8px 10px'}}} >{row.risultato.split(",")[1]}</StyledTableCell>
