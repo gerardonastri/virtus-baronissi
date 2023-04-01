@@ -1,9 +1,9 @@
 .container{
-    height: 130px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 0 100px;
+    padding: 10px 100px;
     padding-top: 10px;
     /*background-color: #1C2B4B;*/
     /*background-color: #435dc9;*/
@@ -16,6 +16,13 @@
     z-index: 999;
     width: 100%;
     color: black;
+
+    -webkit-box-shadow: 0px 0px 15px -1px #000000; 
+    box-shadow: 0px 0px 15px -1px #000000;
+}
+
+.logo{
+    
 }
 .container a, .menu > span{
     margin-left: 40px;
@@ -75,8 +82,9 @@
 }
 
 .container img{
-    height: 120px;
-    width: 180px;
+    height: 100px;
+    width: 150px;
+    object-fit: contain;
 }
 
 .hamburger{
@@ -101,6 +109,7 @@
     }
     .container img{
         height: 80%;
+        margin-top: 10px;
     }
 
     .hamburger{
@@ -186,7 +195,7 @@
 
 @media (max-width: 450px) {
     .container{
-        padding: 0 20px;
+        padding: 0;
         justify-content: space-between;
     }
     .hamburger{
@@ -194,5 +203,8 @@
     }
     .container > a > img{
         width: 150px !important;
+    }
+    .container > a{
+        margin-left: 20px;
     }
 }
