@@ -8,6 +8,8 @@ import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
 import NewspaperOutlinedIcon from '@mui/icons-material/NewspaperOutlined';
 import SportsBasketballOutlinedIcon from '@mui/icons-material/SportsBasketballOutlined';
 import MessageIcon from '@mui/icons-material/Message';
+import {HiOutlineUserGroup} from 'react-icons/hi'
+import {BiTime} from 'react-icons/bi'
 
 
 const Sidebar = () => {
@@ -35,6 +37,8 @@ const Sidebar = () => {
                 <a href="/admin/news" className={id == '/admin/news' && styles.active}><NewspaperOutlinedIcon /> News </a>
                 <a href="/admin/match" className={id == '/admin/match' && styles.active}><SportsBasketballOutlinedIcon /> Matches </a>
                 <a href="/admin/message" className={id == '/admin/message' && styles.active}><MessageIcon /> Messages </a>
+                <a href="/admin/staff" className={id == '/admin/staff' && styles.active}><HiOutlineUserGroup /> Staff </a>
+                <a href="/admin/orario" className={id == '/admin/orario' && styles.active}><BiTime /> Orari </a>
             </div>
         </div>
     </div>
