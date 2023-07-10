@@ -1,27 +1,49 @@
-import storage from '../../util/firebase';
 import React, { useEffect, useState, useContext } from 'react';
-import {AuthContext} from '../../context/authContext/AuthContext';
+import {AuthContext} from '../../../context/authContext/AuthContext';
 import {useRouter} from "next/router";
-import {logout} from '../../context/authContext/actions';
-import styles from '../../styles/Section.module.css';
-import { axiosReq } from '../../util/apiCalls';
+import styles from '../../../styles/Section.module.css';
+import { axiosReq } from '../../../util/apiCalls';
 import LogoutIcon from '@mui/icons-material/Logout';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import SettingsIcon from '@mui/icons-material/Settings';
-import Sidebar from '../../components/Sidebar';
+import Sidebar from '../../../components/Sidebar';
 
-const createStaff = () => {
-    const [tipo, setTipo] = useState('');
+const editStaff = () => {
     const [personale, setPersonale] = useState('');
-    const router = useRouter()
+    const [tipo, setTipo] = useState('');
+    
+
+    const router = useRouter();
+    const {user, dispatch} = useContext(AuthContext)
+
+    useEffect(() => {
+        const pushUser = async () =>  {
+            if(!user){
+                router.push('/login')
+            }
+        }
+        const getData = async () => {
+            const id = location.pathname.split('/')[3];
+            const res = await axiosReq.get(`staff?id=${id}`)
+            setTipo(res.data.name)
+            setPersonale(res.data.allenatori)
+        }
+        
+        getData();
+        pushUser()
+    }, [])
 
 
-    const handleCreate = async () => {
-      const personaleArray = personale.trim().split(",")
+    const edit = async () => {
+      let newPersonale = personale;
+      if(typeof personale === 'string'){
+        newPersonale = personale.trim().split(",")
+      };
       try {
-        const res = await axiosReq.post('staff', {
-          name: tipo,
-          peronale: personaleArray
+        const id2 = location.pathname.split('/')[3];
+        const res = await axiosReq.put(`staff?id=${id2}`, {
+            name: tipo,
+            personale: newPersonale
         })
         router.push('/admin/staff')
       } catch (error) {
@@ -42,7 +64,7 @@ const createStaff = () => {
       <div className={styles.wrapper}>
         <Sidebar />
         <div className={styles.dataContainer}>
-          <h1>Create News</h1>
+          <h1>Upload Image</h1>
           <div className={styles.form}>
 
             <div className={styles.formGroup}>
@@ -53,7 +75,8 @@ const createStaff = () => {
               <label htmlFor="personale">Personale (divere con virgole: attilio,carlo,gerardo)</label>
               <input type="text" name="personale" id="personale" value={personale} onChange={(e) => setPersonale(e.target.value)} />
             </div>
-            <button onClick={handleCreate}>Submit</button>
+
+            <button onClick={edit}>Submit</button>
 
           </div>
         </div>
@@ -62,4 +85,4 @@ const createStaff = () => {
   )
 }
 
-export default createStaff
+export default editStaff

@@ -43,28 +43,28 @@ const editTeam = () => {
 
 
     const edit = async () => {
-            const fileData = await storage.ref(`team/${img.name}`).put(img)
-            const imageSrc = await fileData.ref.getDownloadURL()
-            try {
-                const id2 = location.pathname.split('/')[3];
-              const res = await axiosReq.put(`team?id=${id2}`, {
-                img: imageSrc
-              })
-              router.push('/admin/team')
-            } catch (error) {
-              console.log(error);
-            }
+      const fileData = await storage.ref(`team/${img.name}`).put(img)
+      const imageSrc = await fileData.ref.getDownloadURL()
+      try {
+          const id2 = location.pathname.split('/')[3];
+        const res = await axiosReq.put(`team?id=${id2}`, {
+          img: imageSrc
+        })
+        router.push('/admin/team')
+      } catch (error) {
+        console.log(error);
+      }
     }
 
   return (
     <div className={styles.container}>
       <div className={styles.navbar}>
-              <h2>Admin Page</h2>
-              <div className={styles.links}>
-                  <LogoutIcon />
-                  <NotificationsNoneIcon />
-                  <SettingsIcon />
-              </div>
+        <h2>Admin Page</h2>
+        <div className={styles.links}>
+            <LogoutIcon />
+            <NotificationsNoneIcon />
+            <SettingsIcon />
+        </div>
       </div>
       <div className={styles.wrapper}>
         <Sidebar />

@@ -83,7 +83,7 @@ const orario = () => {
                                     <td>{data.anni}</td>
                                     <td>{data.eccezione}</td>
                                     <td>
-                                        <a href="#" className={`${styles.btn } ${styles.bordershadow} ${styles.update}`}>
+                                        <a href={`/edit/orario/${data._id}`} className={`${styles.btn } ${styles.bordershadow} ${styles.update}`}>
                                             <span className={styles.textgradient} style={{color: 'white'}}><EditOutlinedIcon /></span>
                                         </a>
 

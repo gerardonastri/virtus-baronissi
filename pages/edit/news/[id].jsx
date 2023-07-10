@@ -78,12 +78,12 @@ const editNews = () => {
   return (
     <div className={styles.container}>
       <div className={styles.navbar}>
-              <h2>Admin Page</h2>
-              <div className={styles.links}>
-                  <LogoutIcon />
-                  <NotificationsNoneIcon />
-                  <SettingsIcon />
-              </div>
+        <h2>Admin Page</h2>
+        <div className={styles.links}>
+          <LogoutIcon />
+          <NotificationsNoneIcon />
+          <SettingsIcon />
+        </div>
       </div>
       <div className={styles.wrapper}>
         <Sidebar />

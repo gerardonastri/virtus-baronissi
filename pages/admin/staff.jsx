@@ -75,9 +75,9 @@ const staff = () => {
                             {data?.map(data => (
                                 <tr>
                                     <td>{data.name}</td>
-                                    <td>{data.allenatori.join(", ")}</td>
+                                    <td>{data.personale.join(", ")}</td>
                                     <td>
-                                        <a href="#" className={`${styles.btn } ${styles.bordershadow} ${styles.update}`}>
+                                        <a href={`/edit/staff/${data._id}`} className={`${styles.btn } ${styles.bordershadow} ${styles.update}`}>
                                             <span className={styles.textgradient} style={{color: 'white'}}><EditOutlinedIcon /></span>
                                         </a>
 
