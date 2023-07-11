@@ -30,11 +30,11 @@ export default function Home() {
         />
       </Head>
       <Navbar />
-      <Slider />
-      {/* <div className={styles.featuredImg}>
-        <img src="/hero-img.jpeg" alt="featured img" />
+      {/* <Slider /> */}
+      <div className={styles.featuredImg}>
+        <img src="/featured-img2.jpeg" alt="featured img" />
         <div className={styles.overlay} />
-      </div> */}
+      </div>
       <Fetatured />
       <Societa />
       <News />
