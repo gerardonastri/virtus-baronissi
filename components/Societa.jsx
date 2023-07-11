@@ -42,8 +42,7 @@ const Societa = () => {
                 <li>ore 16:00-17:00 <span className={styles.squadra}>Minibasket (2016-2017)</span></li>
                 <li>ore 17:00-18:00 <span className={styles.squadra}>Minibasket(2014-2015)</span></li>
                 <li>ore 19:00-20:15: <span className={styles.squadra}>Under 13 (2011-2012)</span></li>
-                <li>ore 20:15-21:30: <span className={styles.squadra}>Under 13 (2011-2012)</span></li>
-                <li>ore 25:00-16:15: <span className={styles.squadra}>Under 19 (2004-2006)</span></li>
+                <li>ore 20:15-21:30: <span className={styles.squadra}>Under 19 (2004-2006)</span></li>
             </ul>
             <p><b>Sabato</b></p>
             <ul>

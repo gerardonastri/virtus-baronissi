@@ -60,6 +60,15 @@
     font-size: 18px;
 }
 
+@media screen and (min-width: 1300px) and (max-width: 1550px) {
+    .wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    .card{
+        margin: 0;
+    }
+}
 
 
 @media (min-width: 700px) and (max-width: 1300px) {
