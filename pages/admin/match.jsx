@@ -75,7 +75,7 @@ const match = () => {
                         </thead>
                         <tbody>
                             {data?.map(match => (
-                                <tr>
+                                <tr key={match._id}>
                                     <td>{match.opposingTeam}</td>
                                     <td>{match.opposingTeamImg}</td>
                                     <td>{match.virtusScore}</td>

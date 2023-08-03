@@ -73,7 +73,7 @@ const staff = () => {
                         </thead>
                         <tbody>
                             {data?.map(data => (
-                                <tr>
+                                <tr key={data._id}>
                                     <td>{data.name}</td>
                                     <td>{data.personale.join(", ")}</td>
                                     <td>

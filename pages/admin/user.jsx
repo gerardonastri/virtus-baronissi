@@ -73,7 +73,7 @@ const user = () => {
                         </thead>
                         <tbody>
                             {data?.map(data => (
-                                <tr>
+                                <tr key={data._id}>
                                     <td>{data._id}</td>
                                     <td>{data.username}</td>
                                     <td>{data.email}</td>

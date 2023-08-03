@@ -5,6 +5,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import Image from 'next/image';
 
 
 const Navbar = () => {
@@ -17,7 +18,7 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
         <a href="/">
-            <img className={styles.logo} src="/logo.png" alt="logo virtus baronissi" />
+            <Image className={styles.logo} src="/logo.png" alt="logo virtus baronissi" width={150} height={100} />
         </a>
         <div className={styles.links}>
             <div className={isActive ? `${styles.menu} ${styles.active}` : styles.menu}>

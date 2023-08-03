@@ -32,7 +32,14 @@ export default function Home() {
       <Navbar />
       {/* <Slider /> */}
       <div className={styles.featuredImg}>
-        <img src="/featured-img2.jpeg" alt="featured img" />
+        <Image
+          src="/featured-img2.webp"
+          alt="featured img"
+          layout="fill"
+          // width={50}
+          // height={80}
+          sizes="(max-width: 768px) 100vw"
+        />
         <div className={styles.overlay} />
       </div>
       <Fetatured />

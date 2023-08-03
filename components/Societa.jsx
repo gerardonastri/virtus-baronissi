@@ -1,12 +1,13 @@
 import React from 'react'
 import styles from '../styles/Societa.module.css'
+import Image from 'next/image'
 
 const Societa = () => {
   return (
     <div className={styles.container}>
         <div className={styles.societa}>
             <h1><b>Polisportiva Dilettantistica Virtus Baronissi dal 2000</b></h1>
-            <h3>Staff</h3>
+            <span className={styles.title}>Staff</span>
             <ul>
                 <li><b>Presidente:</b> De Chiara Agostino</li>
                 <li><b>Vice presidente:</b> Spisso Aniello</li>
@@ -16,17 +17,17 @@ const Societa = () => {
                 <li><b>Allenatore under 14-15:</b> Abundo Carlo - Raffeale Aliberti</li>
                 <li><b>Istruttori minibasket:</b> Rizzo Michele - Spisso Gerardo - Senatore Attilio - Iannone Antonio - Farina Davide - Apicella Giuseppe - Sforza Roberta - Napoli Daniele</li>
             </ul>
-            <h3 style={{marginBottom: '10px'}}>Sede</h3>
-            <p>VIA MARCONI, 13 C/O DE CHIARA Agostino 84081 BARONISSI (SA)</p>
+            <span className={styles.title}>Sede</span>
+            <p style={{marginTop: '10px'}}>VIA MARCONI, 13 C/O DE CHIARA Agostino 84081 BARONISSI (SA)</p>
 
-            <h3 style={{marginBottom: '10px'}}>Campo di gioco</h3>
-            <p><b>Palestra Palairno Nando Nobile</b></p>
+            <span className={styles.title} >Campo di gioco</span>
+            <p style={{marginTop: '10px'}}><b>Palestra Palairno Nando Nobile</b></p>
             <p>Via G. Fortunato 22 Baronissi</p>
             <p>TEL. 3921392228</p>
             <p>CF: 95089310650  Dona il tuo 5x1000 </p>
 
-            <h3 style={{marginBottom: '10px'}}>Corsi</h3>
-            <p><b>Lunedi - Mercoledi - Venerdi</b></p>
+            <span className={styles.title} >Corsi</span>
+            <p style={{marginTop: '10px'}}><b>Lunedi - Mercoledi - Venerdi</b></p>
             <ul>
                 <li>ore 15:00-16:15: <span className={styles.squadra}>Under 13 (2011-2012)</span> <span className={styles.eccezione}>solo Lunedì</span></li>
                 <li>ore 16:15-17:30: <span className={styles.squadra}>Minibasket (2016-2017)</span> <span className={styles.eccezione}> solo Lunedì</span></li>
@@ -63,7 +64,7 @@ const Societa = () => {
             
         </div> */}
         <div className={styles.featuredImg}>
-            <img src='/featured-img.jpeg' alt='featured img' />
+            <Image src='/featured-img.jpeg' alt='featured img' height={835} width={591} />
         </div>
     </div>
   )

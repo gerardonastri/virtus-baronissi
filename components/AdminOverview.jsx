@@ -61,7 +61,7 @@ const AdminOverview = () => {
                     <span className={styles.widgetSmTitle}>Admins</span>
                     <ul className={styles.widgetSmList}>
                       {users?.map(user => (
-                        <li className={styles.widgetSmListItem}>
+                        <li className={styles.widgetSmListItem} key={user.username}>
                           <img
                             src= "https://pbs.twimg.com/media/D8tCa48VsAA4lxn.jpg"
                             alt=""
@@ -90,7 +90,7 @@ const AdminOverview = () => {
                         <th className={styles.widgetLgTh}>Status</th>
                       </tr>
                       {messages?.map(message => (
-                        <tr className={styles.widgetLgTr}>
+                        <tr className={styles.widgetLgTr} key={message.nome}>
                           <td className={styles.widgetLgUser}>
                             <img
                               src="https://images.pexels.com/photos/4172933/pexels-photo-4172933.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"

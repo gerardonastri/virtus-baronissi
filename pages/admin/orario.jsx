@@ -76,7 +76,7 @@ const orario = () => {
                         </thead>
                         <tbody>
                             {data?.map(data => (
-                                <tr>
+                                <tr key={data._id}>
                                     <td>{data.orarioInizio}</td>
                                     <td>{data.orarioFine}</td>
                                     <td>{data.categoria}</td>

@@ -75,7 +75,7 @@ const news = () => {
                         </thead>
                         <tbody>
                             {data?.map(news => (
-                                    <tr>
+                                    <tr key={news._id}>
                                         <td>{news.title}</td>
                                         <td>{news.desc.split(0,80)}</td>
                                         <td>{news.coverImg}</td>

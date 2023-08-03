@@ -37,7 +37,6 @@ const Squadra = () => {
         <Head>
             <title>Virtus baronissi | News</title>
             <meta name="description" content="News della virtus baronissi" />
-            <link rel="icon" href="http://www.virtusbaronissi.altervista.org/varie/LOGO.jpg" />
         </Head>
         <Navbar />
         <div className={styles.wrapper}>
@@ -68,8 +67,8 @@ const Squadra = () => {
                 {data?.body}
             </div>
             <div className={styles.images}>
-                {data?.images?.map(img => (
-                    <a href={img} target="_blank">
+                {data?.images?.map((img,i) => (
+                    <a href={img} target="_blank" key={i}>
                         <img src={img} alt="" />
                     </a>
                 ))}

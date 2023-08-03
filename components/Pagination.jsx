@@ -3,6 +3,7 @@ import styles from '../styles/Pagination.module.css';
 import {axiosReq} from '../util/apiCalls'
 import axios from 'axios'
 import { Pagination as Pages } from '@mui/material';
+import Image from 'next/image';
 
 const Pagination = ({images}) => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -33,9 +34,9 @@ const Pagination = ({images}) => {
   return (
     <div className={styles.container}>
         <div className={styles.wrapper}>
-            {currentImages?.map(img => (
-                <a href={`${img}`} target="_blank">
-                    <img src={img} alt="immagine della squadra" />
+            {currentImages?.map((img, i) => (
+                <a href={`${img}`} target="_blank" key={i}>
+                    <Image src={img} alt="immagine della squadra" height={300} width={312} />
                 </a>
             ))}
         </div>

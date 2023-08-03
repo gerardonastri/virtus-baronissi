@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useEffect } from 'react';
 import styles from '../styles/Featured.module.css'
 import {axiosReq} from '../util/apiCalls'
+import Image from 'next/image';
 
 const Fetatured = () => {
   const [lastMatch, setLastMatch] = useState(null);
@@ -14,7 +15,6 @@ const Fetatured = () => {
           const res = await axiosReq.get('match?sort=yes')
           setLastMatch(res.data.lastMatch)
           setNextMatches(res.data.nextMatches)
-          console.log(res.data.nextMatches)
           setNextMatch(res.data.lastMatchMinibasket)
         } catch (error) {
             console.log(error);
@@ -83,14 +83,14 @@ const Fetatured = () => {
           <div className={`${styles.box} ${styles.responsive}`} style={{height: "fit-content"}}>
             <h3>{nextMatch?.data} - {nextMatch?.luogo}</h3>
             <div className={styles.team2}>
-              <img src="/logo.png" className={styles.virtusImg} alt="virtus baronissi" style={{ height: '120px'}} />
+              <Image src="/logo.png" className={styles.virtusImg} alt="virtus baronissi" height={120} />
               <h2>Virtus Baronissi</h2>
             </div>
             <div className={styles.vs} >
               <h1>VS</h1>
             </div>
             <div className={styles.team2}>
-              <img src={nextMatch?.opposingTeamImg} className={styles.guest} alt="logo squadra avversaria" style={{ height: '120px'}} />
+              <Image src={nextMatch?.opposingTeamImg} className={styles.guest} alt="logo squadra avversaria" height={120} />
               <h2>{nextMatch?.opposingTeam}</h2>
             </div>
           </div>

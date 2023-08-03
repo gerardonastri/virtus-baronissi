@@ -73,7 +73,7 @@ const message = () => {
                         </thead>
                         <tbody>
                             {data?.map(message => (
-                                <tr>
+                                <tr key={message._id}>
                                     <td>{message.nome}</td>
                                     <td>{message.telefono}</td>
                                     <td>{message.email}</td>

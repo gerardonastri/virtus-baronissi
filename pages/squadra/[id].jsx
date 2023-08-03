@@ -73,7 +73,6 @@ const Squadra = () => {
         <Head>
             <title>Virtus baronissi | {id && id}</title>
             <meta name="description" content="Giovanili della virtus baronissi" />
-            <link rel="icon" href="http://www.virtusbaronissi.altervista.org/varie/LOGO.jpg" />
         </Head>
         <Navbar />
         <h1 className={styles.teamName}>{id && id === "under 15"  ? (

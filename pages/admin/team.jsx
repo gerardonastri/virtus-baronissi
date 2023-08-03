@@ -75,7 +75,7 @@ const team = () => {
                         </thead>
                         <tbody>
                             {data?.map(team => (
-                                <tr>
+                                <tr key={team._id}>
                                     <td>{team.name}</td>
                                     <td>
                                         {team.images.map(img => (
@@ -84,17 +84,17 @@ const team = () => {
                                     </td>
                                     <td>
                                         {team.roaster.map(persona => (
-                                            <div>{persona.nome}</div>
+                                            <div key={persona.nome}>{persona.nome}</div>
                                         ))}
                                     </td>
                                     <td>
                                         {team.classifica.map(squadra => (
-                                            <div>{squadra.nome}</div>
+                                            <div key={squadra.nome}>{squadra.nome}</div>
                                         ))}
                                     </td>
                                     <td>
                                         {team.calendario.map(calendario => (
-                                            <div>{calendario.partita}</div>
+                                            <div key={calendario.partita}>{calendario.partita}</div>
                                         ))}
                                     </td>
                                     <td>

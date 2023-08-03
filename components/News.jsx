@@ -3,6 +3,7 @@ import styles from '../styles/News.module.css'
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import {axiosReq} from '../util/apiCalls'
+import Image from 'next/image';
 
 
 
@@ -28,8 +29,8 @@ const News = () => {
             <h1>News Recenti</h1>
             <div className={styles.wrapper}>
                 {news?.map(news => (
-                    <div className={styles.card}>
-                        <img src={news.coverImg} alt="immagine della news" />
+                    <div className={styles.card} key={news.title}>
+                        <Image src={news.coverImg} alt="immagine della news" width={400} height={320} style={{width: "100%", height: "320px", position: "relative"}} />
                         <h3 className={styles.title}>{news.title}</h3>
                         {/* <span className={styles.time}>
                             <AccessTimeIcon />

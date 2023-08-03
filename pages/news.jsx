@@ -41,7 +41,7 @@ const news = () => {
     <Head>
         <title>Virtus baronissi | News</title>
         <meta name="description" content="News della virtus baronissi" />
-        <link rel="icon" href="http://www.virtusbaronissi.altervista.org/varie/LOGO.jpg" />
+        <link rel="icon" href="http://www.virtusbaronissi..org/varie/LOGO.jpg" />
     </Head>
     <Navbar />
     <div className={styles.wrapper}>
@@ -49,7 +49,7 @@ const news = () => {
         {news?.length > 0 ? (
             <div className={styles.newsContainer}>
             {news?.map(news => (
-                <div className={styles.card}>
+                <div className={styles.card} key={news.title}>
                  <img src={news.coverImg} alt="immagine della news" />
                  <h3 className={styles.title}>{news.title}</h3>
                  <span className={styles.time}>
