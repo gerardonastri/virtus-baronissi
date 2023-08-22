@@ -2,14 +2,21 @@ import Head from "next/head";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import styles from "../styles/Home.module.css";
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "../components/Slider";
 import Fetatured from "../components/Featured";
 import Societa from "../components/Societa";
 import News from "../components/News";
 import Footer from "../components/Footer";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("http://www.virtusbaronissi.altervista.org/basket.htm");
+  });
+
   return (
     <div className={styles.container}>
       <Head>
